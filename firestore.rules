@@ -1,0 +1,54 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      // For this app, only the owner/admin can modify
+      // You might want a better check, but for now we'll allow the authenticated user if in admin list
+      return isSignedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    function isValidString(val, max) {
+      return val is string && val.size() <= max;
+    }
+
+    // Site Settings
+    match /settings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Admin List (Only read by self, write by existing admin)
+    match /admins/{adminId} {
+      allow read: if isSignedIn() && request.auth.uid == adminId;
+      allow write: if false; // Manual setup required for first admin or via console
+    }
+
+    // Blog Posts
+    match /posts/{postId} {
+      allow read: if true;
+      allow create: if isAdmin() && 
+        request.resource.data.keys().hasAll(['title', 'slug', 'content', 'image']) &&
+        isValidString(request.resource.data.title, 200) &&
+        request.resource.data.createdAt == request.time;
+      allow update: if isAdmin() && 
+        request.resource.data.updatedAt == request.time;
+      allow delete: if isAdmin();
+    }
+
+    // Services
+    match /services/{serviceId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+  }
+}

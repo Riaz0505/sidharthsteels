@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "BlogPost": {
+      "title": "Blog Post",
+      "description": "Dynamic blog posts for industrial insights",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "excerpt": { "type": "string" },
+        "content": { "type": "string" },
+        "image": { "type": "string" },
+        "author": { "type": "string" },
+        "category": { "type": "string" },
+        "date": { "type": "string", "format": "date-time" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "slug", "content", "image"]
+    },
+    "Service": {
+      "title": "Industrial Service/Product",
+      "description": "Product details and technical specs",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "technical": { "type": "object" },
+        "image": { "type": "string" },
+        "order": { "type": "number" }
+      },
+      "required": ["title", "description", "image"]
+    },
+    "SiteSettings": {
+      "title": "Site Settings",
+      "description": "Global configuration for images and texts",
+      "type": "object",
+      "properties": {
+        "heroTitle": { "type": "string" },
+        "heroTagline": { "type": "string" },
+        "heroImage": { "type": "string" },
+        "contactEmail": { "type": "string" },
+        "contactPhone": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "posts": {
+      "schema": "BlogPost",
+      "description": "Collection of blog articles"
+    },
+    "services": {
+      "schema": "Service",
+      "description": "Collection of industrial products"
+    },
+    "settings": {
+      "schema": "SiteSettings",
+      "description": "Global site configuration"
+    }
+  }
+}
