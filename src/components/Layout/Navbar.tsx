@@ -32,33 +32,17 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-white shadow-lg py-3" : "bg-white border-b border-steel-100 py-4"
+        isScrolled ? "bg-white shadow-lg py-2" : "bg-white/95 backdrop-blur-sm border-b border-steel-100 py-3"
       )}
     >
       <div className="container-custom">
         <div className="flex justify-between items-center px-4 md:px-6">
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl overflow-hidden bg-white flex items-center justify-center p-1 shadow-sm border border-steel-100">
-              <img 
-                src={logo} 
-                alt="Logo" 
-                className="w-full h-full object-contain" 
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className={cn(
-                "font-display text-base md:text-2xl font-black tracking-tighter uppercase transition-colors leading-none",
-                "text-steel-950"
-              )}>
-                SIDHARTH<span className="text-primary">STEELS</span>
-              </span>
-              <span className={cn(
-                "text-[8px] md:text-[10px] font-bold tracking-[0.3em] uppercase mt-1",
-                "text-steel-400"
-              )}>
-                Truly Stainless
-              </span>
-            </div>
+          <Link to="/" className="flex items-center group py-0.5">
+            <img 
+              src={logo} 
+              alt="Logo" 
+              className="h-14 md:h-20 w-auto object-contain transition-transform duration-300 scale-125 group-hover:scale-135" 
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -143,17 +127,9 @@ export default function Navbar() {
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
             className="fixed inset-y-0 right-0 w-full xs:w-[85%] max-w-sm bg-white shadow-2xl z-[60] md:hidden flex flex-col"
           >
-            <div className="p-5 border-b border-steel-100 flex justify-between items-center bg-white sticky top-0 z-10">
-              <div className="flex items-center gap-3">
-                 <div className="w-12 h-12 rounded-xl bg-white border border-steel-100 flex items-center justify-center p-1 shadow-sm overflow-hidden">
-                   <img src={logo} alt="Logo" className="w-full h-full object-contain" />
-                 </div>
-                 <div className="flex flex-col">
-                   <span className="text-base font-black uppercase tracking-tighter text-steel-950">
-                    SIDHARTH<span className="text-primary">STEELS</span>
-                   </span>
-                   <span className="text-[9px] font-bold text-steel-400 uppercase tracking-[0.2em] leading-none">Truly Stainless</span>
-                 </div>
+            <div className="p-3 border-b border-steel-100 flex justify-between items-center bg-white sticky top-0 z-10">
+              <div className="py-2">
+                 <img src={logo} alt="Logo" className="h-16 w-auto object-contain scale-110" />
               </div>
               <button 
                 onClick={() => setIsOpen(false)}

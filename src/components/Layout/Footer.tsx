@@ -10,22 +10,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand Info */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-4 group">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl overflow-hidden bg-white flex items-center justify-center p-1 shadow-sm">
-                <img 
-                  src={logo} 
-                  alt="Logo" 
-                  className="w-full h-full object-contain" 
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display text-xl md:text-3xl font-black tracking-tighter uppercase whitespace-nowrap">
-                  SIDHARTH<span className="text-primary">STEELS</span>
-                </span>
-                <span className="text-[10px] md:text-[12px] font-bold tracking-[0.4em] text-steel-400 uppercase mt-1">
-                  Truly Stainless
-                </span>
-              </div>
+            <Link to="/" className="flex items-center group py-2">
+              <img 
+                src={logo} 
+                alt="Logo" 
+                className="h-24 md:h-36 w-auto object-contain transition-transform duration-300 scale-110 group-hover:scale-120" 
+              />
             </Link>
             <p className="text-steel-400 text-sm leading-relaxed">
               Sidharth Steels is a premier trusted stainless steel dealer and stockist based in Chennai, serving as a key distribution hub for South India.
