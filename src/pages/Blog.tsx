@@ -44,7 +44,7 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
       {/* Editorial Header Section */}
-      <section className="py-24 px-4 overflow-hidden relative">
+      <section id="blog-header" className="py-8 md:py-12 px-4 overflow-hidden relative">
         <div className="container-custom">
           <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16">
             <div className="max-w-2xl">
@@ -70,37 +70,6 @@ export default function Blog() {
               </button>
             </div>
           </div>
-
-          {/* Featured Post - Large Horizontal Card */}
-          {featuredPost && (
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="group relative h-[500px] md:h-[600px] bg-steel-900 rounded-[64px] overflow-hidden mb-12 border border-steel-200"
-            >
-              <img 
-                src={featuredPost.image} 
-                alt={featuredPost.title}
-                className="absolute inset-0 w-full h-full object-cover brightness-50 group-hover:scale-105 transition-transform duration-[3000ms]"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/40 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-12 md:p-20 z-10 max-w-4xl text-white">
-                <span className="px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 inline-block">
-                  Latest Feature
-                </span>
-                <h2 className="text-3xl md:text-5xl font-black font-display mb-6 leading-tight tracking-tight">
-                  {featuredPost.title}
-                </h2>
-                <p className="text-steel-300 text-lg font-medium leading-relaxed mb-10 line-clamp-2 max-w-2xl">
-                  {featuredPost.excerpt}
-                </p>
-                <Link to={`/blog/${featuredPost.id || featuredPost.slug}`} className="px-10 py-5 bg-primary text-white font-bold rounded-2xl inline-flex items-center gap-3 hover:scale-105 transition-transform shadow-lg">
-                  Read Full Insight <ArrowRight size={20} />
-                </Link>
-              </div>
-            </motion.div>
-          )}
         </div>
       </section>
 
@@ -108,7 +77,7 @@ export default function Blog() {
       <section className="pb-32 px-4">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.slice(1).map((post, i) => (
+            {posts.map((post, i) => (
               <motion.article 
                 key={post.id || post.slug}
                 initial={{ opacity: 0, y: 20 }}

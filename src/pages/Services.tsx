@@ -7,58 +7,129 @@ import { cn } from "../lib/utils";
 
 export default function Services() {
   const [searchParams] = useSearchParams();
-  const serviceId = searchParams.get('id') || SERVICES[0].id;
-  const currentService = SERVICES.find(s => s.id === serviceId) || SERVICES[0];
+  const serviceId = searchParams.get('id');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const currentService = SERVICES.find(s => s.id === serviceId);
 
   // Sync scroll to top on service change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [serviceId]);
 
-  return (
-    <div className="pt-20 min-h-screen bg-white font-sans">
-      {/* 1. Hero Section - Breadcrumbs & Title */}
-      <section className="relative py-12 border-b border-steel-100 bg-steel-50/30">
+  if (!currentService) {
+    return (
+      <div className="min-h-screen bg-[#F8F9FA] py-12 md:py-20 px-4">
         <div className="container-custom">
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-steel-400">
-              <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-              <span>/</span>
-              <span className="text-steel-950">Services</span>
-              <span>/</span>
-              <span className="text-primary truncate max-w-[150px] md:max-w-none">{currentService.title}</span>
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+            <motion.span 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-sm mb-4 block"
+            >
+              Certified Solutions
+            </motion.span>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-6xl font-black text-steel-950 tracking-tighter uppercase mb-6"
+            >
+              Material Catalog
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-steel-500 font-medium text-sm md:text-lg leading-relaxed"
+            >
+              Explore South India's most comprehensive inventory of premium stainless steel, 
+              sourced from global tier-1 mills for mission-critical applications.
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            {SERVICES.map((s, i) => (
+              <motion.div 
+                key={s.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="group relative h-[400px] md:h-[450px] rounded-[32px] md:rounded-[48px] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 bg-steel-950"
+              >
+                <img 
+                  src={s.image} 
+                  alt={s.title} 
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms] brightness-50 grayscale hover:grayscale-0"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 z-10">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight group-hover:text-primary transition-colors">{s.title}</h3>
+                  <Link 
+                    to={`/services?id=${s.id}`} 
+                    className="inline-flex items-center gap-3 px-6 py-3 bg-white text-steel-950 font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all shadow-lg"
+                  >
+                    View Specifications <ArrowRight size={18} />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Catalog Footer CTA */}
+          <div className="mt-20 md:mt-32 text-center bg-steel-950 rounded-[40px] p-10 md:p-20 text-white relative overflow-hidden">
+            <div className="relative z-10 max-w-2xl mx-auto">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Need a Custom Quote?</h2>
+              <p className="text-steel-400 font-medium mb-10 text-sm md:text-lg">
+                Our inventory updates daily. Connect with our sales engineering team for 
+                bulk pricing and logistical planning for your manufacturing floor.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-5 justify-center">
+                <Link to="/contact" className="px-10 py-5 bg-primary text-white font-bold rounded-2xl flex items-center justify-center gap-3 hover:scale-105 transition-transform shadow-lg">
+                  Submit RFQ <ArrowRight size={20} />
+                </Link>
+                <a href="tel:+914422334455" className="px-10 py-5 border-2 border-white/20 font-bold rounded-2xl hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                  <Phone size={18} /> Call Specialist
+                </a>
+              </div>
             </div>
+            <div className="absolute -top-24 -left-24 w-64 h-64 bg-primary/20 rounded-full blur-[120px]" />
+            <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-steel-800/30 rounded-full blur-[120px]" />
           </div>
         </div>
-      </section>
+      </div>
+    );
+  }
 
-      {/* 2. Main content Layout */}
-      <section className="py-16 md:py-24">
+  return (
+    <div className="min-h-screen bg-white font-sans">
+      {/* Main content Layout */}
+      <section className="py-4 md:py-8">
         <div className="container-custom">
-          <div className="flex flex-col lg:flex-row gap-12">
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-8 overflow-hidden">
             
             {/* Sidebar (Desktop) */}
-            <aside className="lg:w-1/3 xl:w-1/4 space-y-8 order-2 lg:order-1">
+            <aside className="lg:w-1/3 xl:w-1/4 space-y-6 order-2 lg:order-1">
               {/* All Services List */}
-              <div className="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-                <h4 className="text-lg font-bold text-steel-950 mb-6 flex items-center gap-3">
+              <div className="bg-steel-50 rounded-xl p-5 border border-steel-100">
+                <h4 className="text-base font-bold text-steel-950 mb-4 flex items-center gap-3">
                   All Services
                 </h4>
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   {SERVICES.map(s => (
                     <Link
                       key={s.id}
                       to={`/services?id=${s.id}`}
                       className={cn(
-                        "flex justify-between items-center px-5 py-4 rounded-xl font-bold text-sm transition-all grayscale-0",
+                         "flex justify-between items-center px-4 py-3 rounded-lg font-bold text-[13px] transition-all grayscale-0",
                         s.id === serviceId 
                           ? "bg-white text-primary shadow-lg border border-steel-50" 
                           : "text-steel-600 hover:bg-white hover:text-primary border border-transparent"
                       )}
                     >
                       {s.title}
-                      <ArrowRight size={16} className={cn("transition-transform", s.id === serviceId && "translate-x-1")} />
+                      <ArrowRight size={14} className={cn("transition-transform", s.id === serviceId && "translate-x-1")} />
                     </Link>
                   ))}
                 </div>
@@ -110,13 +181,13 @@ export default function Services() {
             </aside>
 
             {/* Content Area */}
-            <main className="lg:w-2/3 xl:w-3/4 order-1 lg:order-2 space-y-12">
+            <main className="lg:w-2/3 xl:w-3/4 order-1 lg:order-2 space-y-8">
               {/* Feature Image */}
               <motion.div 
                 key={`${serviceId}-img`}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="rounded-[32px] overflow-hidden shadow-2xl relative aspect-[16/9]"
+                className="rounded-[24px] overflow-hidden shadow-xl relative aspect-[16/9]"
               >
                 <img 
                   src={currentService.image} 
@@ -124,14 +195,14 @@ export default function Services() {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-
+ 
               {/* Title and Intro */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <motion.h2 
                   key={`${serviceId}-title`}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="text-3xl md:text-5xl font-black text-steel-950 tracking-tight"
+                  className="text-2xl md:text-3xl font-black text-steel-950 tracking-tight uppercase"
                 >
                   {currentService.title} Supplier in Chennai
                 </motion.h2>
@@ -139,7 +210,7 @@ export default function Services() {
                   key={`${serviceId}-desc`}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="text-steel-600 text-lg leading-relaxed font-medium"
+                  className="text-steel-600 text-[14px] md:text-[16px] leading-relaxed font-medium"
                 >
                   {currentService.description}
                 </motion.p>
@@ -245,29 +316,29 @@ export default function Services() {
         </div>
       </section>
 
-      {/* 3. Call to Action Footer */}
-      <section className="bg-steel-50 py-20 px-4">
-         <div className="container-custom">
-            <div className="bg-white rounded-[48px] p-8 md:p-16 lg:p-24 shadow-2xl border border-steel-100 flex flex-col lg:flex-row items-center justify-between gap-12 text-left">
-               <div className="max-w-2xl">
-                 <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8">
-                    <Phone size={32} />
-                 </div>
-                 <h2 className="text-3xl md:text-5xl font-black text-steel-950 mb-6 tracking-tighter uppercase whitespace-pre-line leading-tight">Ready to Start <br />Your Project?</h2>
-                 <p className="text-steel-500 text-lg font-medium mb-0 leading-relaxed">
-                   Get in touch with our expert sales team to discuss technical specifications and bulk pricing for {currentService.title.toLowerCase()}.
-                 </p>
-               </div>
-               <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-                  <a href="tel:+914422334455" className="px-10 py-5 bg-primary text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 shadow-xl shadow-primary/20 transition-all flex items-center justify-center gap-3">
-                    Call Now <ArrowRight size={18} />
-                  </a>
-                  <a href="mailto:sales@sidharthsteel.com" className="px-10 py-5 bg-steel-950 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 shadow-xl transition-all flex items-center justify-center gap-3">
-                    Send Email <Mail size={18} />
-                  </a>
-               </div>
+      <section className="py-6 md:py-8 px-4 pb-12">
+        <div className="container-custom">
+          <div className="bg-steel-950 rounded-[32px] md:rounded-[40px] p-6 md:p-8 relative overflow-hidden group">
+            <div className="relative z-10 max-w-2xl">
+              <h2 className="text-2xl md:text-5xl font-bold text-white mb-4 md:mb-6 tracking-tight leading-tight uppercase">Start Your Industrial <br />Legacy Today</h2>
+              <p className="text-steel-300 text-sm md:text-lg mb-6 md:mb-8 font-medium leading-relaxed opacity-80">
+                Connect with our technical engineers for material selection and competitive bulk pricing for {currentService.title.toLowerCase()}. 
+                Your partner in high-grade stainless steel.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:+914422334455" className="w-full sm:w-auto text-center px-6 md:px-10 py-3 md:py-4 bg-primary text-white font-bold rounded-xl hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3">
+                  <Phone size={18} /> Call Sales
+                </a>
+                <a href="mailto:sales@sidharthsteel.com" className="w-full sm:w-auto text-center px-6 md:px-10 py-3 md:py-4 border-2 border-white/20 text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                  <Mail size={18} /> Email Us
+                </a>
+              </div>
             </div>
-         </div>
+            {/* Background Decorative element */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-steel-800/10 to-transparent skew-x-12 translate-x-1/4 group-hover:translate-x-0 transition-transform duration-[2000ms]" />
+            <div className="absolute -bottom-20 -right-20 text-white/5 w-64 h-64 blur-sm border border-white/10 rounded-full" />
+          </div>
+        </div>
       </section>
     </div>
   );

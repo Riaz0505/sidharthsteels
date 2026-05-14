@@ -4,28 +4,28 @@ import p7 from "../assets/p7.jpg";
 
 export default function Contact() {
   return (
-    <div className="pt-24 min-h-screen bg-[#F8F9FA]">
+    <div className="min-h-screen bg-[#F8F9FA]">
       {/* Premium Header */}
-      <section className="py-24 px-4 overflow-hidden relative bg-white">
+      <section className="py-6 md:py-8 px-4 overflow-hidden relative bg-white">
         <div className="container-custom relative z-10">
-          <div className="flex flex-col lg:flex-row justify-between items-end gap-12 border-b border-steel-100 pb-20">
+          <div className="flex flex-col lg:flex-row justify-between items-end gap-12 border-b border-steel-100 pb-6 md:pb-8">
             <div className="max-w-2xl">
               <motion.span 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="text-steel-400 font-bold tracking-[0.2em] uppercase text-[10px] mb-8 block"
+                className="text-steel-400 font-bold tracking-[0.2em] uppercase text-[9px] mb-4 md:mb-6 block"
               >
                 Inquiry & Support Center
               </motion.span>
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-4xl md:text-8xl font-extrabold text-steel-950 mb-0 leading-[1.1] md:leading-[0.95] tracking-tighter"
+                className="text-3xl md:text-5xl font-extrabold text-steel-950 mb-0 leading-[1.1] md:leading-[1] tracking-tighter"
               >
                 Connect <span className="text-steel-300 font-light italic">With</span> <br />
                 Our Experts.
               </motion.h1>
-              <div className="mt-12 rounded-[32px] overflow-hidden aspect-[21/9] shadow-xl">
+              <div className="mt-8 md:mt-10 rounded-[28px] overflow-hidden aspect-[21/9] shadow-lg">
                  <img src={p7} alt="Facility" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" />
               </div>
             </div>
@@ -38,9 +38,9 @@ export default function Contact() {
       </section>
 
       {/* Main Content */}
-      <section className="py-32 px-4">
+      <section className="py-16 md:py-24 px-4">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24">
             {/* Info Section */}
             <div className="lg:col-span-5 space-y-16">
               <div className="space-y-6">

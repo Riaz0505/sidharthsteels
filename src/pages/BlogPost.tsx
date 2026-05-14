@@ -60,7 +60,7 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
       {/* Hero Section - Article Title */}
-      <section className="py-24 px-4 bg-white relative">
+      <section id="blog-post-header" className="py-8 md:py-12 px-4 bg-white relative">
         <div className="container-custom max-w-5xl">
           <Link to="/blog" className="flex items-center gap-2 text-steel-400 font-bold mb-12 hover:text-steel-950 transition-colors uppercase text-[10px] tracking-[0.2em] group w-fit">
             <ArrowLeft size={16} className="group-hover:-translate-x-2 transition-transform" /> Return to Insights

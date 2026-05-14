@@ -1,47 +1,73 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
 import { cn } from "../../lib/utils";
+import { SERVICES } from "../../constants";
 
 export default function Breadcrumbs() {
   const location = useLocation();
+  const [searchParams] = useSearchParams();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   if (location.pathname === "/") return null;
 
+  // Resolve service title if we are on the services page
+  const serviceId = searchParams.get('id');
+  const service = serviceId ? SERVICES.find(s => s.id === serviceId) : null;
+
   return (
-    <div className="pt-24 pb-0 bg-[#F8F9FA]">
+    <div id="breadcrumbs-container" className="pt-1 pb-0 bg-[#F8F9FA]/50">
       <div className="container-custom">
         <nav className="flex" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-[10px] font-bold uppercase tracking-[0.2em] bg-white px-6 py-3 rounded-full shadow-sm border border-steel-100">
+          <ol className="flex items-center space-x-2 text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-steel-400">
             <li>
               <Link 
                 to="/" 
-                className="text-steel-400 hover:text-steel-950 transition-colors flex items-center gap-2"
+                className="hover:text-primary transition-colors flex items-center gap-1.5"
               >
-                <Home size={12} />
+                <Home size={10} />
                 <span>Home</span>
               </Link>
             </li>
             {pathnames.map((value, index) => {
               const last = index === pathnames.length - 1;
               const to = `/${pathnames.slice(0, index + 1).join("/")}`;
+              
+              // Custom title mapping
+              let displayTitle = value.replace(/-/g, ' ');
+              if (value === 'services' && service) {
+                // If it's the services part and we have a specific service, 
+                // we might want to show "Services / Title"
+              }
 
               return (
                 <li key={to} className="flex items-center space-x-2">
-                  <ChevronRight size={10} className="text-steel-200" />
-                  {last ? (
-                    <span className="text-steel-950">{value.replace(/-/g, ' ')}</span>
+                  <span className="text-steel-200">/</span>
+                  {last && !service ? (
+                    <span className="text-primary font-black uppercase">{displayTitle}</span>
                   ) : (
                     <Link 
                       to={to} 
-                      className="text-steel-400 hover:text-steel-950 transition-colors"
+                      className={cn(
+                        "hover:text-primary transition-colors uppercase",
+                        last && service ? "text-steel-400" : ""
+                      )}
                     >
-                      {value.replace(/-/g, ' ')}
+                      {displayTitle}
                     </Link>
                   )}
                 </li>
               );
             })}
+            
+            {/* Additional segment for specific service */}
+            {location.pathname === '/services' && service && (
+              <li className="flex items-center space-x-2">
+                <span className="text-steel-200">/</span>
+                <span className="text-primary font-black uppercase truncate max-w-[150px] md:max-w-none">
+                  {service.title}
+                </span>
+              </li>
+            )}
           </ol>
         </nav>
       </div>

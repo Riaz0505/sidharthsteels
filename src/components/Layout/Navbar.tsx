@@ -32,22 +32,22 @@ export default function Navbar() {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-300",
-          isScrolled ? "bg-white shadow-lg py-2" : "bg-white/95 backdrop-blur-sm border-b border-steel-100 py-3"
+          "fixed top-0 left-0 right-0 w-full z-[150] transition-all duration-300",
+          isScrolled ? "bg-white shadow-lg py-1.5" : "bg-white/95 backdrop-blur-md border-b border-steel-100 py-2.5"
         )}
       >
-        <div className="container-custom">
-          <div className="flex justify-between items-center px-4 md:px-6">
-            <Link to="/" className="flex items-center group py-1">
+        <div className="w-full px-4 md:px-10">
+          <div className="flex justify-between items-center">
+            <Link to="/" className="flex items-center group py-0.5">
               <img 
                 src={logo} 
                 alt="Logo" 
-                className="h-16 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                className="h-12 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </Link>
   
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-12">
               {navLinks.map((link) => (
                 <div 
                   key={link.name} 
@@ -58,14 +58,14 @@ export default function Navbar() {
                   <Link
                     to={link.path}
                     className={cn(
-                      "text-[10px] font-bold uppercase tracking-[0.1em] transition-all flex items-center gap-1 py-2",
+                      "text-[16px] font-bold uppercase tracking-[0.2em] transition-all flex items-center gap-1 py-2",
                       location.pathname === link.path 
                         ? "text-primary"
                         : "text-steel-500 hover:text-primary"
                     )}
                   >
                     {link.name}
-                    {link.hasDropdown && <ChevronDown size={12} className={cn("transition-transform", isServicesOpen && "rotate-180")} />}
+                    {link.hasDropdown && <ChevronDown size={14} className={cn("transition-transform", isServicesOpen && "rotate-180")} />}
                   </Link>
   
                   {link.hasDropdown && (
@@ -81,7 +81,7 @@ export default function Navbar() {
                             <Link
                               key={service.id}
                               to={`/services#${service.id}`}
-                              className="block px-6 py-3 text-[10px] font-bold text-steel-700 hover:text-primary hover:bg-steel-50 transition-colors uppercase tracking-widest border-l-2 border-transparent hover:border-primary"
+                              className="block px-6 py-3 text-[11px] font-bold text-steel-700 hover:text-primary hover:bg-steel-50 transition-colors uppercase tracking-widest border-l-2 border-transparent hover:border-primary"
                             >
                               {service.title}
                             </Link>
@@ -95,7 +95,7 @@ export default function Navbar() {
               <a
                 href="tel:+914422334455"
                 className={cn(
-                  "px-6 py-2.5 bg-primary text-white text-[10px] font-bold uppercase tracking-widest rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/20",
+                  "px-6 py-2.5 bg-primary text-white text-[11px] font-bold uppercase tracking-widest rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/20",
                 )}
               >
                 Get Quote
@@ -139,10 +139,7 @@ export default function Navbar() {
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
               className="fixed inset-y-0 right-0 w-full xs:w-[85%] max-w-sm bg-white shadow-2xl z-[120] md:hidden flex flex-col"
             >
-              <div className="p-4 border-b border-steel-100 flex justify-between items-center bg-white sticky top-0 z-10">
-                <div className="py-2">
-                   <img src={logo} alt="Logo" className="h-16 w-auto object-contain" />
-                </div>
+              <div className="p-4 border-b border-steel-100 flex justify-end items-center bg-white sticky top-0 z-10">
                 <button 
                   onClick={() => setIsOpen(false)}
                   className="p-3 text-primary hover:bg-brand-red-50 transition-colors bg-steel-50 rounded-xl shadow-sm"

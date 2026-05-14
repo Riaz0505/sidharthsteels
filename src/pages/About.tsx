@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { ACHIEVEMENTS } from "../constants";
 import { CheckCircle2, Target, Eye, ShieldCheck, ArrowRight } from "lucide-react";
 import { cn } from "../lib/utils";
@@ -8,23 +9,23 @@ import p3 from "../assets/p3.jpg";
 
 export default function About() {
   return (
-    <div className="pt-24 min-h-screen bg-[#F8F9FA]">
+    <div className="min-h-screen bg-[#F8F9FA]">
       {/* Content Section & Stats */}
-      <section className="py-20 md:py-32 px-4 bg-white">
+      <section id="about-intro" className="py-2 md:py-4 px-4 bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 items-center mb-24 md:mb-40">
-            <div className="lg:col-span-12 max-w-4xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center mb-8 md:mb-12">
+            <div className="lg:col-span-12 max-w-5xl">
                <motion.span 
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-[12px] mb-6 md:mb-8 block"
+                  className="text-primary font-bold tracking-[0.2em] uppercase text-[11px] md:text-[13px] mb-4 md:mb-5 block"
                 >
-                  Est. 1999 • Industrial Excellence
-                </motion.span>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-steel-950 mb-8 md:mb-10 tracking-tight leading-tight uppercase">
+                   Est. 1999 • Industrial Excellence
+                 </motion.span>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-steel-950 mb-6 md:mb-8 tracking-tighter leading-[1] uppercase">
                 The hub of stainless steel <br className="hidden md:block" /> distribution in South India.
               </h1>
-              <div className="space-y-6 md:space-y-8 text-steel-500 text-base md:text-xl md:leading-[1.8] font-medium max-w-3xl">
+              <div className="space-y-4 md:space-y-6 text-steel-500 text-sm md:text-lg md:leading-[1.6] font-medium max-w-3xl">
                 <p>
                   Sidharth Steels is a premier trusted stainless steel dealer and stockist based in Chennai, serving as a key distribution hub for South India. We specialize in high-grade stainless steel products that power the region's industrial growth.
                 </p>
@@ -48,7 +49,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 border-t border-steel-100 pt-16 md:pt-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 border-t border-steel-100 pt-12 md:pt-16">
             {ACHIEVEMENTS.map((stat, i) => (
               <div key={i} className="bg-steel-50/50 p-8 md:p-10 rounded-[32px] md:rounded-[48px] border border-steel-100 shadow-sm flex flex-col justify-between min-h-[180px] md:min-h-[220px] group hover:bg-white hover:shadow-xl transition-all duration-500">
                 <h3 className="text-4xl md:text-5xl font-black text-steel-950 mb-2 leading-none group-hover:text-primary transition-colors">{stat.value}</h3>
@@ -60,10 +61,10 @@ export default function About() {
       </section>
 
       {/* Mission/Vision Section */}
-      <section className="py-20 md:py-32 px-4 bg-steel-50/50">
+      <section className="py-8 md:py-12 px-4 bg-steel-50/50">
         <div className="container-custom">
           {/* Mission/Vision - Bento Style */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { 
                 icon: Target, 
@@ -87,13 +88,13 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-12 bg-white border border-steel-100 rounded-[56px] hover:shadow-2xl transition-all h-[400px] flex flex-col group"
+                className="p-8 md:p-10 bg-white border border-steel-100 rounded-[40px] hover:shadow-2xl transition-all h-[320px] flex flex-col group"
               >
-                <div className="w-16 h-16 bg-steel-50 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
-                  <item.icon size={28} />
+                <div className="w-12 h-12 bg-steel-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+                  <item.icon size={24} />
                 </div>
-                <h3 className="text-2xl font-bold text-steel-950 mb-6 tracking-tight">{item.title}</h3>
-                <p className="text-steel-500 font-medium leading-relaxed text-sm">{item.desc}</p>
+                <h3 className="text-xl font-bold text-steel-950 mb-4 tracking-tight">{item.title}</h3>
+                <p className="text-steel-500 font-medium leading-relaxed text-xs md:text-sm">{item.desc}</p>
                 <div className="mt-auto">
                    <div className="flex items-center gap-4 text-xs font-bold text-steel-200 uppercase tracking-widest">
                       <span>Principles</span>
@@ -107,7 +108,7 @@ export default function About() {
       </section>
 
       {/* Facility Gallery */}
-      <section className="py-32 px-4 bg-white">
+      <section className="py-16 md:py-24 px-4 bg-white">
         <div className="container-custom">
           <div className="text-left mb-16 md:mb-24">
             <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] mb-6 block">Our Facility</span>
@@ -129,13 +130,13 @@ export default function About() {
       </section>
 
       {/* Why Choose Us - Horizontal Grid */}
-      <section className="py-40 bg-steel-950 rounded-[80px] mx-4 mb-4 overflow-hidden relative">
+      <section className="py-12 md:py-32 bg-steel-950 rounded-[48px] md:rounded-[80px] mx-2 md:mx-4 mb-4 overflow-hidden relative">
         <div className="container-custom relative z-10">
-          <div className="text-left max-w-4xl mb-24">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] mb-6 block">Competitive Advantage</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter uppercase leading-none">Why Choose Sidharth Steels?</h2>
+          <div className="text-left max-w-4xl mb-12 md:mb-24">
+            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] mb-4 md:mb-6 block">Competitive Advantage</span>
+            <h2 className="text-3xl md:text-6xl font-bold text-white mb-6 md:mb-8 tracking-tighter uppercase leading-tight md:leading-none">Why Choose Sidharth Steels?</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
             {[
               "Quality Assurance (304, 316, 400 series)",
               "Vast Ready-Stock Inventory",
@@ -144,11 +145,11 @@ export default function About() {
               "Competitive Wholesale Pricing",
               "Material Certification Documentation"
             ].map((item, i) => (
-              <div key={i} className="flex flex-col gap-6 p-10 bg-white/5 border border-white/10 rounded-[40px] hover:bg-white/10 transition-colors">
-                <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white">
-                   <CheckCircle2 size={18} />
+              <div key={i} className="flex flex-col gap-4 md:gap-6 p-6 md:p-10 bg-white/5 border border-white/10 rounded-[32px] md:rounded-[40px] hover:bg-white/10 transition-colors">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/20 flex items-center justify-center text-white">
+                   <CheckCircle2 size={16} />
                 </div>
-                <span className="text-lg font-bold text-white tracking-tight">{item}</span>
+                <span className="text-sm md:text-lg font-bold text-white tracking-tight">{item}</span>
               </div>
             ))}
           </div>
