@@ -27,7 +27,7 @@ export default function App() {
       <div className="flex flex-col min-h-screen">
         <ScrollToTop />
         <Navbar />
-        <main className="flex-grow pt-20 md:pt-32">
+        <main className="flex-grow pt-16 md:pt-24">
           <Breadcrumbs />
           <Routes>
             <Route path="/" element={<Home />} />

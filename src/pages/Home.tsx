@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section id="hero" className="relative h-[70vh] md:h-[85vh] flex items-center pt-12 md:pt-16 overflow-hidden">
+      <section id="hero" className="relative h-[70vh] md:h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={settings.heroImage}
@@ -80,26 +80,26 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-steel-950 via-steel-950/60 to-transparent" />
         </div>
-        <div className="w-full px-4 md:px-16 lg:px-24 relative z-10">
+        <div className="w-full px-5 md:px-16 lg:px-24 relative z-10">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl text-left"
+            className="max-w-4xl text-left flex flex-col items-start"
           >
-            <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.1] mb-6 md:mb-8 tracking-tighter uppercase">
+            <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.1] mb-6 md:mb-8 tracking-tighter uppercase text-left">
               {settings.heroTitle.includes('India') ? (
                 <>The Backbone of <br className="hidden md:block" /><span className="text-primary">Industrial India</span></>
               ) : settings.heroTitle}
             </h1>
-            <p className="text-[10px] md:text-lg text-steel-200 mb-6 md:mb-8 font-medium max-w-lg leading-relaxed opacity-75">
+            <p className="text-[10px] md:text-lg text-steel-200 mb-6 md:mb-8 font-medium max-w-lg leading-relaxed opacity-75 text-left">
               {settings.heroTagline}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/services" className="px-8 py-4 bg-primary text-white text-xs md:text-base font-bold rounded-xl hover:scale-105 transition-all flex items-center justify-center gap-3 shadow-2xl shadow-primary/30">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Link to="/services" className="px-8 py-4 bg-primary text-white text-xs md:text-base font-bold rounded-xl hover:scale-105 transition-all flex items-center justify-center gap-3 shadow-2xl shadow-primary/30 w-full sm:w-auto">
                 Explore Inventory <ArrowRight size={18} />
               </Link>
-              <Link to="/contact" className="px-8 py-4 border-2 border-white/20 text-white text-xs md:text-base font-bold rounded-xl hover:bg-white/10 transition-all text-center">
+              <Link to="/contact" className="px-8 py-4 border-2 border-white/20 text-white text-xs md:text-base font-bold rounded-xl hover:bg-white/10 transition-all text-center w-full sm:w-auto">
                 Material Request
               </Link>
             </div>
