@@ -15,7 +15,7 @@ export default function Breadcrumbs() {
   const service = serviceId ? SERVICES.find(s => s.id === serviceId) : null;
 
   return (
-    <div id="breadcrumbs-container" className="pt-1 pb-0 bg-[#F8F9FA]/50">
+    <div id="breadcrumbs-container" className="pt-4 pb-2 bg-[#F8F9FA]/50">
       <div className="container-custom">
         <nav className="flex" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-2 text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-steel-400">
@@ -24,7 +24,7 @@ export default function Breadcrumbs() {
                 to="/" 
                 className="hover:text-primary transition-colors flex items-center gap-1.5"
               >
-                <Home size={10} />
+                <Home size={14} />
                 <span>Home</span>
               </Link>
             </li>
@@ -43,12 +43,12 @@ export default function Breadcrumbs() {
                 <li key={to} className="flex items-center space-x-2">
                   <span className="text-steel-200">/</span>
                   {last && !service ? (
-                    <span className="text-primary font-black uppercase">{displayTitle}</span>
+                    <span className="text-primary font-black uppercase truncate max-w-[120px] md:max-w-none">{displayTitle}</span>
                   ) : (
                     <Link 
                       to={to} 
                       className={cn(
-                        "hover:text-primary transition-colors uppercase",
+                        "hover:text-primary transition-colors uppercase truncate max-w-[100px] md:max-w-none",
                         last && service ? "text-steel-400" : ""
                       )}
                     >

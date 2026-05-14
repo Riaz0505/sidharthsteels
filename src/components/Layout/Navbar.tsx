@@ -199,7 +199,7 @@ export default function Navbar() {
                         {link.name}
                         <ArrowRight size={18} className={cn(
                           "transition-all",
-                          location.pathname === link.path ? "text-primary translate-x-1" : "text-steel-200"
+                          location.pathname === link.path ? "text-primary translate-x-1" : "text-steel-400"
                         )} />
                       </Link>
                     )}
