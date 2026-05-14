@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { dbService } from "../services/dbService";
 import p1 from "../assets/p1.jpg";
 import p5 from "../assets/p5.jpg";
+import p6 from "../assets/p6.jpg";
 
 const iconMap: Record<string, any> = {
   Building2, Car, FlaskConical, Utensils, Stethoscope, Zap
@@ -21,7 +22,7 @@ export default function Home() {
   const [settings, setSettings] = useState({
     heroTitle: "The Backbone of Industrial India",
     heroTagline: `${TAGLINE} — Delivering certified, high-grade stainless steel with precision logistics.`,
-    heroImage: p5,
+    heroImage: p6,
   });
   const [posts, setPosts] = useState<any[]>(STATIC_POSTS.slice(0, 3));
   const [loading, setLoading] = useState(true);
@@ -122,9 +123,9 @@ export default function Home() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-4 md:p-8 bg-white/95 backdrop-blur-xl border border-steel-100 rounded-[20px] md:rounded-[24px] shadow-xl text-center group hover:-translate-y-1 transition-all duration-500"
+                  className="p-4 md:p-8 bg-white/95 backdrop-blur-xl border border-steel-100 rounded-[20px] md:rounded-[24px] shadow-xl text-left group hover:-translate-y-1 transition-all duration-500"
                 >
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-steel-950 text-white rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-3 md:mb-4 group-hover:rotate-12 transition-transform">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-primary text-white rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-4 group-hover:rotate-12 transition-transform shadow-lg shadow-primary/20">
                     <stat.icon size={18} />
                   </div>
                   <h3 className="text-xl md:text-3xl font-bold text-steel-950 mb-0.5 tracking-tighter">{stat.value}</h3>
@@ -153,7 +154,7 @@ export default function Home() {
                   { icon: BarChart3, title: "Competitive Rates", desc: "Optimized direct mill sourcing." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-steel-50 rounded-lg flex items-center justify-center text-steel-950">
+                    <div className="flex-shrink-0 w-10 h-10 bg-brand-red-50 rounded-lg flex items-center justify-center text-primary shadow-sm">
                       <item.icon size={20} />
                     </div>
                     <div>
@@ -164,22 +165,22 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="relative">
+              <div className="relative">
               <div className="aspect-video bg-steel-950 rounded-[24px] overflow-hidden shadow-2xl max-w-md mx-auto lg:mx-0">
                 <img 
                   src={p1} 
                   alt="Industrial Steel Manufacturing" 
-                  className="w-full h-full object-cover opacity-60"
+                  className="w-full h-full object-cover opacity-80"
                 />
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-6 lg:-bottom-10 lg:-left-10 bg-white p-6 md:p-8 rounded-[32px] md:rounded-[40px] shadow-2xl border border-steel-100 max-w-[200px] md:max-w-[240px]">
-                <Package className="text-steel-950 mb-4" size={32} />
+                <Package className="text-primary mb-4" size={32} />
                 <p className="text-sm font-bold text-steel-800 leading-snug">
                   "Sidharth Steels has consistently delivered precision materials for our chemical plant expansions."
                 </p>
                 <div className="mt-4 pt-4 border-t border-steel-50">
-                   <p className="text-[10px] font-bold text-steel-400">SR. PROJECT MANAGER</p>
+                   <p className="text-[10px] font-bold text-primary">SR. PROJECT MANAGER</p>
                    <p className="text-xs font-bold text-steel-950">Major Petrochem Corp</p>
                 </div>
               </div>
@@ -245,10 +246,10 @@ export default function Home() {
       {/* Industries Section with Icons */}
       <section className="py-20 md:py-32 bg-white px-4">
         <div className="container-custom">
-          <div className="text-center mb-16 md:mb-24 px-4">
-             <span className="text-steel-400 font-bold tracking-widest uppercase text-[10px] md:text-xs mb-4 block">Market Coverage</span>
-             <h2 className="text-3xl md:text-5xl font-bold text-steel-950 mb-4 md:mb-6 tracking-tight">The Sectors We Empower</h2>
-             <p className="text-steel-600 font-medium max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          <div className="text-left mb-16 md:mb-24">
+             <span className="text-primary font-bold tracking-widest uppercase text-[10px] md:text-xs mb-4 block">Market Coverage</span>
+             <h2 className="text-3xl md:text-5xl font-bold text-steel-950 mb-4 md:mb-6 tracking-tight uppercase">The Sectors We Empower</h2>
+             <p className="text-steel-600 font-medium max-w-3xl text-base md:text-lg leading-relaxed">
                Engineered solutions for mission-critical operations across diverse industrial landscapes. 
              </p>
           </div>
@@ -265,7 +266,7 @@ export default function Home() {
                   transition={{ delay: i * 0.05 }}
                   className="bg-white p-8 md:p-10 rounded-[32px] border border-steel-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 cursor-default group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-steel-950 text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-brand-red-50 text-primary flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
                     <Icon size={24} />
                   </div>
                   <h3 className="text-xl font-bold text-steel-950 mb-3 tracking-tight">{industry.name}</h3>
@@ -290,9 +291,9 @@ export default function Home() {
                          { step: "03", title: "Precision Processing", desc: "Custom slitting, cutting, and polishing based on drawings." }
                        ].map((item) => (
                          <div key={item.step} className="flex gap-4 md:gap-6 group">
-                            <span className="text-xl md:text-3xl font-bold text-steel-800 transition-colors group-hover:text-white">{item.step}</span>
+                            <span className="text-xl md:text-3xl font-bold text-steel-800 transition-colors group-hover:text-primary">{item.step}</span>
                             <div>
-                               <h4 className="text-base md:text-lg font-bold mb-1">{item.title}</h4>
+                               <h4 className="text-base md:text-lg font-bold mb-1 group-hover:text-primary transition-colors">{item.title}</h4>
                                <p className="text-steel-400 text-xs md:text-sm font-medium leading-relaxed">{item.desc}</p>
                             </div>
                          </div>
@@ -301,12 +302,12 @@ export default function Home() {
                  </div>
                  <div className="relative">
                     <div className="bg-steel-900 rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/5 shadow-2xl">
-                       <Award className="text-steel-500 mb-4 md:mb-6" size={40} />
+                       <Award className="text-primary mb-4 md:mb-6" size={40} />
                        <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Zero-Defect Policy</h3>
                        <p className="text-steel-400 text-xs md:text-sm font-medium mb-6 md:mb-8 leading-relaxed italic">
                          "Our reputation is built on the precision of our products. In 25 years, we have maintained a 99.8% material acceptance rate for critical projects."
                        </p>
-                        <Link to="/about" className="w-full md:w-auto text-center px-8 py-4 bg-primary text-white text-sm font-bold rounded-xl inline-block hover:scale-105 transition-transform shadow-lg">
+                        <Link to="/about" className="w-full md:w-auto text-center px-8 py-4 bg-primary text-white text-sm font-bold rounded-xl inline-block hover:scale-105 transition-transform shadow-lg shadow-primary/20">
                           Read More About Us
                        </Link>
                     </div>

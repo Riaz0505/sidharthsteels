@@ -246,17 +246,19 @@ export default function Services() {
       </section>
 
       {/* 3. Call to Action Footer */}
-      <section className="bg-steel-50 py-20">
+      <section className="bg-steel-50 py-20 px-4">
          <div className="container-custom">
-            <div className="bg-white rounded-[48px] p-8 md:p-16 shadow-2xl border border-steel-100 flex flex-col items-center text-center">
-               <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-8">
-                  <Phone size={32} />
+            <div className="bg-white rounded-[48px] p-8 md:p-16 lg:p-24 shadow-2xl border border-steel-100 flex flex-col lg:flex-row items-center justify-between gap-12 text-left">
+               <div className="max-w-2xl">
+                 <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8">
+                    <Phone size={32} />
+                 </div>
+                 <h2 className="text-3xl md:text-5xl font-black text-steel-950 mb-6 tracking-tighter uppercase whitespace-pre-line leading-tight">Ready to Start <br />Your Project?</h2>
+                 <p className="text-steel-500 text-lg font-medium mb-0 leading-relaxed">
+                   Get in touch with our expert sales team to discuss technical specifications and bulk pricing for {currentService.title.toLowerCase()}.
+                 </p>
                </div>
-               <h2 className="text-3xl md:text-5xl font-black text-steel-950 mb-6 tracking-tighter">Ready to Start Your Project?</h2>
-               <p className="text-steel-500 text-lg font-medium max-w-2xl mb-12">
-                 Get in touch with our expert sales team to discuss technical specifications and bulk pricing for {currentService.title.toLowerCase()}.
-               </p>
-               <div className="flex flex-col sm:flex-row gap-4">
+               <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
                   <a href="tel:+914422334455" className="px-10 py-5 bg-primary text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 shadow-xl shadow-primary/20 transition-all flex items-center justify-center gap-3">
                     Call Now <ArrowRight size={18} />
                   </a>

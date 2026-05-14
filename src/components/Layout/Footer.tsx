@@ -10,21 +10,23 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand Info */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center group py-2">
-              <img 
-                src={logo} 
-                alt="Logo" 
-                className="h-24 md:h-36 w-auto object-contain transition-transform duration-300 scale-110 group-hover:scale-120" 
-              />
+            <Link to="/" className="flex items-center group">
+              <div className="bg-white p-2 rounded-xl inline-block shadow-lg">
+                <img 
+                  src={logo} 
+                  alt="Logo" 
+                  className="h-24 md:h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                />
+              </div>
             </Link>
             <p className="text-steel-400 text-sm leading-relaxed">
               Sidharth Steels is a premier trusted stainless steel dealer and stockist based in Chennai, serving as a key distribution hub for South India.
             </p>
             <div className="flex space-x-4">
-              <Facebook size={18} className="text-steel-400 hover:text-white cursor-pointer" />
-              <Twitter size={18} className="text-steel-400 hover:text-white cursor-pointer" />
-              <Instagram size={18} className="text-steel-400 hover:text-white cursor-pointer" />
-              <Linkedin size={18} className="text-steel-400 hover:text-white cursor-pointer" />
+              <Facebook size={18} className="text-steel-400 hover:text-primary cursor-pointer transition-colors" />
+              <Twitter size={18} className="text-steel-400 hover:text-primary cursor-pointer transition-colors" />
+              <Instagram size={18} className="text-steel-400 hover:text-primary cursor-pointer transition-colors" />
+              <Linkedin size={18} className="text-steel-400 hover:text-primary cursor-pointer transition-colors" />
             </div>
           </div>
 
