@@ -44,21 +44,21 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
       {/* Editorial Header Section */}
-      <section id="blog-header" className="py-12 md:py-32 px-4 overflow-hidden relative bg-white">
+      <section id="blog-header" className="py-8 md:py-12 px-4 overflow-hidden relative bg-white">
         <div className="container-custom">
-          <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16 md:mb-32">
+          <div className="flex flex-col lg:flex-row justify-between items-end gap-6 mb-6 md:mb-10">
             <div className="max-w-4xl">
               <motion.span 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-[11px] mb-6 md:mb-8 block"
+                className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-sm mb-4 md:mb-8 block"
               >
                 Industrial Knowledge Hub
               </motion.span>
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-4xl md:text-8xl font-black font-display text-steel-950 leading-[1] tracking-tighter"
+                className="text-4xl md:text-6xl lg:text-8xl font-black font-display text-steel-950 leading-[0.9] tracking-tighter"
               >
                 Metal <span className="text-steel-300 font-light italic">insights</span> <br />
                 & market report
@@ -69,9 +69,9 @@ export default function Blog() {
       </section>
 
       {/* Main Grid Section */}
-      <section className="pb-16 md:pb-40 px-4">
+      <section className="pb-10 md:pb-20 px-4">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {posts.map((post, i) => (
               <motion.article 
                 key={post.id || post.slug}
@@ -81,33 +81,33 @@ export default function Blog() {
                 transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col group cursor-pointer"
               >
-                <div className="aspect-[16/10] rounded-[32px] md:rounded-[48px] overflow-hidden mb-6 md:mb-10 shadow-2xl relative">
+                <div className="aspect-[16/10] rounded-[24px] md:rounded-[32px] overflow-hidden mb-4 md:mb-6 shadow-xl relative">
                    <img 
                       src={post.image} 
                       alt={post.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms]"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute top-6 left-6 md:top-8 md:left-8">
-                       <span className="px-4 py-2 md:px-5 md:py-2.5 bg-white/90 backdrop-blur-md rounded-xl text-[9px] md:text-[10px] font-black text-steel-950 uppercase tracking-widest shadow-xl">
+                    <div className="absolute top-4 left-4 md:top-6 md:left-6">
+                       <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white/90 backdrop-blur-md rounded-lg text-[8px] md:text-[9px] font-black text-steel-950 uppercase tracking-widest shadow-lg">
                          {post.category}
                        </span>
                     </div>
                 </div>
-                <div className="px-2 flex-grow flex flex-col">
-                  <div className="flex items-center gap-6 mb-6 text-[10px] font-black text-steel-400 uppercase tracking-widest">
-                    <span className="flex items-center gap-2"><Clock size={14} className="text-primary" /> {post.date ? new Date(post.date).toLocaleDateString() : post.date}</span>
-                    <span className="flex items-center gap-2"><User size={14} className="text-primary" /> {post.author || "Technical Expert"}</span>
+                <div className="px-1 flex-grow flex flex-col">
+                  <div className="flex items-center gap-4 mb-3 text-[9px] font-black text-steel-400 uppercase tracking-widest">
+                    <span className="flex items-center gap-1.5"><Clock size={12} className="text-primary" /> {post.date ? new Date(post.date).toLocaleDateString() : post.date}</span>
+                    <span className="flex items-center gap-1.5"><User size={12} className="text-primary" /> {post.author || "Technical"}</span>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-black text-steel-950 mb-6 tracking-tight leading-tight group-hover:text-primary transition-colors">
+                  <h3 className="text-xl md:text-2xl font-black text-steel-950 mb-3 tracking-tight leading-tight group-hover:text-primary transition-colors">
                     {post.title}
                   </h3>
-                  <p className="text-steel-500 font-medium text-base md:text-lg leading-relaxed mb-10 line-clamp-3 opacity-80">
+                  <p className="text-steel-500 font-medium text-sm md:text-base leading-relaxed mb-6 line-clamp-2 opacity-80">
                     {post.excerpt}
                   </p>
                   <div className="mt-auto">
-                    <Link to={`/blog/${post.id || post.slug}`} className="text-steel-950 font-black text-sm md:text-base uppercase tracking-widest flex items-center gap-3 group-hover:gap-5 transition-all border-b-2 border-primary/20 pb-1 hover:border-primary">
-                      Full Article <ArrowRight size={20} />
+                    <Link to={`/blog/${post.id || post.slug}`} className="text-steel-950 font-black text-xs md:text-sm uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all border-b-2 border-primary/20 pb-1 hover:border-primary w-fit">
+                      Read More <ArrowRight size={16} />
                     </Link>
                   </div>
                 </div>
@@ -116,21 +116,21 @@ export default function Blog() {
           </div>
 
           {/* Newsletter / CTA Section within Grid */}
-          <div className="mt-32">
-            <div className="bg-steel-950 rounded-[64px] p-12 md:p-24 text-center relative overflow-hidden">
+          <div className="mt-10 md:mt-16">
+            <div className="bg-steel-950 rounded-[32px] md:rounded-[48px] p-8 md:p-16 text-center relative overflow-hidden">
                <div className="relative z-10 max-w-2xl mx-auto">
-                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Stay ahead of the curve.</h2>
-                  <p className="text-steel-400 text-lg font-medium mb-10 leading-relaxed italic">
-                    Weekly technical updates and material pricing reports delivered to your inbox.
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Stay ahead of the curve.</h2>
+                  <p className="text-steel-400 text-base md:text-lg font-medium mb-8 leading-relaxed italic">
+                    Weekly technical updates and material pricing reports delivered home.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                      <input 
                        type="email" 
-                       placeholder="Enter your email" 
-                       className="flex-grow px-8 py-5 rounded-2xl bg-white/5 border border-white/10 text-white font-medium focus:outline-none focus:border-white/30 transition-all"
+                       placeholder="Enter email" 
+                       className="flex-grow px-6 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-medium focus:outline-none focus:border-white/30 transition-all text-sm"
                      />
-                     <button className="px-10 py-5 bg-white text-steel-950 font-bold rounded-2xl hover:scale-105 transition-transform shrink-0">
-                       Subscribe Now
+                     <button className="px-8 py-4 bg-white text-steel-950 font-bold rounded-xl hover:scale-105 transition-transform shrink-0 text-sm">
+                       Subscribe
                      </button>
                   </div>
                </div>

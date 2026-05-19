@@ -5,9 +5,9 @@ import logo from "../../assets/logoss.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-steel-950 text-white pt-16 pb-8">
+    <footer className="bg-steel-950 text-white pt-10 pb-6">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand Info */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center group">
@@ -15,7 +15,7 @@ export default function Footer() {
                 <img 
                   src={logo} 
                   alt="Logo" 
-                  className="h-16 md:h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                  className="h-12 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
                 />
               </div>
             </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-steel-500 text-xs">
+        <div className="border-t border-white/10 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-steel-500 text-xs">
           <p>© {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</p>
           <div className="flex space-x-6">
             <span className="hover:text-white cursor-pointer">Privacy Policy</span>

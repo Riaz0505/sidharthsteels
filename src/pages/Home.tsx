@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section id="hero" className="relative h-[70vh] md:h-[90vh] flex items-center overflow-hidden">
+      <section id="hero" className="relative h-[60vh] md:h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={settings.heroImage}
@@ -87,19 +87,19 @@ export default function Home() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-4xl text-left flex flex-col items-start"
           >
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-white leading-[1] mb-8 md:mb-10 tracking-tighter text-left">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.1] mb-6 md:mb-8 tracking-tighter text-left">
               {settings.heroTitle.includes('India') ? (
                 <>The Backbone of <br className="hidden md:block" /><span className="text-primary">Industrial India</span></>
               ) : settings.heroTitle}
             </h1>
-            <p className="text-xs sm:text-sm md:text-xl text-steel-200 mb-10 md:mb-12 font-medium max-w-xl leading-relaxed opacity-80 text-left">
+            <p className="text-sm md:text-xl text-steel-200 mb-8 md:mb-10 font-medium max-w-xl leading-relaxed opacity-80 text-left">
               {settings.heroTagline}
             </p>
-            <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
-              <Link to="/services" className="px-10 py-5 bg-primary text-white text-sm md:text-lg font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 shadow-2xl shadow-primary/40 w-full sm:w-auto uppercase tracking-wider">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Link to="/services" className="px-8 py-4 bg-primary text-white text-sm md:text-lg font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 shadow-2xl shadow-primary/40 w-full sm:w-auto uppercase tracking-wider">
                 Explore Inventory <ArrowRight size={20} />
               </Link>
-              <Link to="/contact" className="px-10 py-5 border-2 border-white/30 text-white text-sm md:text-lg font-bold rounded-2xl hover:bg-white/10 active:scale-95 transition-all text-center w-full sm:w-auto backdrop-blur-sm">
+              <Link to="/contact" className="px-8 py-4 border-2 border-white/30 text-white text-sm md:text-lg font-bold rounded-2xl hover:bg-white/10 active:scale-95 transition-all text-center w-full sm:w-auto backdrop-blur-sm">
                 Material Request
               </Link>
             </div>
@@ -107,46 +107,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section with Glassmorphism */}
-      <section className="relative -mt-12 md:-mt-32 z-20 pb-16 md:pb-40 px-4">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-              {[
-                { icon: Shield, label: "Trusted Legacy", value: "40+ Years" },
-                { icon: Award, label: "Global Partners", value: "100+" },
-                { icon: Truck, label: "Supply Center", value: "Chennai Hub" },
-                { icon: Globe, label: "Project Reach", value: "Pan-India" }
-              ].map((stat, i) => (
-                <motion.div 
-                  key={i}
-                  viewport={{ once: true, margin: "-100px" }}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                  className="p-8 md:p-10 bg-white/95 backdrop-blur-2xl border border-steel-100 rounded-[24px] md:rounded-[40px] shadow-2xl text-left group hover:-translate-y-2 transition-all duration-500"
-                >
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 transition-transform shadow-sm">
-                    <stat.icon size={28} />
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-black text-steel-950 mb-2 tracking-tighter">{stat.value}</h3>
-                  <p className="text-steel-400 font-bold uppercase text-[9px] md:text-[10px] tracking-widest">{stat.label}</p>
-                </motion.div>
-              ))}
-          </div>
-        </div>
-      </section>
-
       {/* Core Strengths Section */}
-      <section className="py-16 md:py-40 bg-white px-4">
+      <section className="py-10 md:py-16 bg-white px-4">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-center">
             <div className="lg:col-span-7">
-              <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-sm mb-6 block">Unmatched Quality</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-steel-950 mb-6 md:mb-10 tracking-tight leading-[1.1]">Why industrial leaders choose Sidharth Steels</h2>
-              <p className="text-steel-500 font-medium text-base md:text-xl mb-10 md:mb-12 leading-relaxed max-w-2xl">
+              <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-sm mb-4 block">Unmatched Quality</span>
+              <h2 className="text-3xl md:text-5xl font-black text-steel-950 mb-4 md:mb-8 tracking-tight leading-[1.1]">Why industrial leaders choose Sidharth Steels</h2>
+              <p className="text-steel-500 font-medium text-base md:text-lg mb-8 md:mb-10 leading-relaxed max-w-2xl">
                 We don't just supply metal; we provide the foundation for South India's infrastructure. Our rigorous selection process ensures every sheet and pipe exceeds international standards.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                 {[
                   { icon: Clock, title: "Just-In-Time", desc: "Express delivery across Tamil Nadu." },
                   { icon: CheckCircle2, title: "100% Traceable", desc: "All materials come with MTC." },
@@ -186,7 +157,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="absolute -bottom-6 -left-6 md:-bottom-12 md:-left-12 bg-white p-6 md:p-12 rounded-[32px] md:rounded-[48px] shadow-2xl border border-steel-100 max-w-[200px] md:max-w-[320px] z-20"
+                className="absolute -bottom-6 -left-6 md:-bottom-12 md:-right-12 lg:-left-12 bg-white p-6 md:p-12 rounded-[32px] md:rounded-[48px] shadow-2xl border border-steel-100 max-w-[200px] md:max-w-[320px] z-20"
               >
                 <Package className="text-primary mb-6" size={32} />
                 <p className="text-sm md:text-lg font-bold text-steel-800 leading-snug italic mb-6">
@@ -203,22 +174,22 @@ export default function Home() {
       </section>
 
       {/* Services Preview Grid */}
-      <section className="py-16 md:py-40 bg-steel-950 text-white overflow-hidden relative px-4">
+      <section className="py-10 md:py-16 bg-steel-950 text-white overflow-hidden relative px-4">
         <div className="container-custom relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-24 gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-6">
             <div className="max-w-xl">
-              <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-sm mb-4 md:mb-6 block">Product Catalog</span>
-              <h2 className="text-3xl md:text-5xl font-black mb-6 md:mb-10 tracking-tight leading-tight">The material portfolio powering modern industry</h2>
-              <p className="text-steel-400 font-medium text-base md:text-xl italic leading-relaxed">
+              <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-sm mb-3 md:mb-4 block">Product Catalog</span>
+              <h2 className="text-3xl md:text-5xl font-black mb-4 md:mb-6 tracking-tight leading-tight">The material portfolio powering modern industry</h2>
+              <p className="text-steel-400 font-medium text-base md:text-lg italic leading-relaxed">
                 South India's most comprehensive inventory of premium stainless steel grades.
               </p>
             </div>
-            <Link to="/services" className="w-full md:w-auto px-8 py-4 bg-primary text-white font-black rounded-xl flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-primary/40 uppercase tracking-widest text-[13px] md:text-sm">
+            <Link to="/services" className="w-full md:w-auto px-6 py-3 bg-primary text-white font-black rounded-xl flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-primary/40 uppercase tracking-widest text-[13px] md:text-sm">
                Full Catalog <ArrowRight size={20} />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {SERVICES.slice(0, 3).map((service, i) => (
               <motion.div 
                 key={service.id}
@@ -257,17 +228,17 @@ export default function Home() {
       </section>
 
       {/* Industries Section with Icons */}
-      <section className="py-16 md:py-40 bg-white px-4">
+      <section className="py-10 md:py-16 bg-white px-4">
         <div className="container-custom">
-          <div className="text-left mb-12 md:mb-24">
-             <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-[11px] mb-4 md:mb-6 block">Market Coverage</span>
-             <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-steel-950 mb-6 md:mb-10 tracking-tighter capitalize leading-tight">The sectors we empower</h2>
-             <p className="text-steel-500 font-medium max-w-2xl text-base md:text-2xl leading-relaxed">
+          <div className="text-left mb-10 md:mb-16">
+             <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-[11px] mb-4 md:mb-5 block">Market Coverage</span>
+             <h2 className="text-3xl md:text-4xl lg:text-6xl font-black text-steel-950 mb-4 md:mb-8 tracking-tighter capitalize leading-tight">The sectors we empower</h2>
+             <p className="text-steel-500 font-medium max-w-2xl text-base md:text-xl leading-relaxed">
                Engineered solutions for mission-critical operations across diverse industrial landscapes. 
              </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             {INDUSTRIES_DETAILED.map((industry, i) => {
               const Icon = iconMap[industry.icon];
               return (
@@ -291,13 +262,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-steel-50 py-12 md:py-32 overflow-hidden px-4">
+      <section className="bg-steel-50 py-8 md:py-16 overflow-hidden px-4">
         <div className="container-custom">
-           <div className="bg-steel-950 rounded-[32px] md:rounded-[64px] p-8 md:p-24 relative overflow-hidden">
-              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-24 items-center text-white">
+           <div className="bg-steel-950 rounded-[32px] md:rounded-[64px] p-8 md:p-16 relative overflow-hidden">
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center text-white">
                  <div className="lg:col-span-7">
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-8 md:mb-16 leading-[1.1] tracking-tight">Our supply chain <br className="hidden md:block" /><span className="text-steel-600">excellence process</span></h2>
-                    <div className="space-y-8 md:space-y-16">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 md:mb-10 leading-[1.1] tracking-tight">Our supply chain <br className="hidden md:block" /><span className="text-steel-600">excellence process</span></h2>
+                    <div className="space-y-6 md:space-y-10">
                        {[
                          { step: "01", title: "Global Sourcing", desc: "Materials directly from tier-1 global mills like Jindal and POSCO." },
                          { step: "02", title: "Quality Grading", desc: "Rigorous ultrasonic and chemical analysis at our Chennai facility." },
@@ -308,12 +279,12 @@ export default function Home() {
                            initial={{ opacity: 0, x: -20 }}
                            whileInView={{ opacity: 1, x: 0 }}
                            viewport={{ once: true }}
-                           className="flex gap-6 md:gap-8 group"
+                           className="flex gap-4 md:gap-6 group"
                          >
-                            <span className="text-3xl md:text-6xl font-black text-steel-800 transition-colors group-hover:text-primary leading-none">{item.step}</span>
+                            <span className="text-2xl md:text-5xl font-black text-steel-800 transition-colors group-hover:text-primary leading-none">{item.step}</span>
                             <div>
-                               <h4 className="text-lg md:text-2xl font-black mb-2 md:mb-3 group-hover:text-primary transition-colors tracking-tight capitalize">{item.title}</h4>
-                               <p className="text-steel-400 text-sm md:text-lg font-medium leading-relaxed max-w-lg">{item.desc}</p>
+                               <h4 className="text-lg md:text-xl font-black mb-1 md:mb-2 group-hover:text-primary transition-colors tracking-tight capitalize">{item.title}</h4>
+                               <p className="text-steel-400 text-sm md:text-base font-medium leading-relaxed max-w-lg">{item.desc}</p>
                             </div>
                          </motion.div>
                        ))}
@@ -344,18 +315,18 @@ export default function Home() {
       </section>
 
       {/* Latest Blog Section */}
-      <section className="py-16 md:py-40 bg-white px-4">
+      <section className="py-10 md:py-16 bg-white px-4">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-24 gap-8 md:gap-10">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-6 md:gap-8">
              <div className="max-w-xl">
-                <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-[11px] mb-4 md:mb-6 block">Knowledge Hub</span>
-                <h2 className="text-2xl md:text-5xl lg:text-6xl font-black text-steel-950 tracking-tighter leading-tight">Industrial insights</h2>
+                <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-[11px] mb-3 md:mb-4 block">Knowledge Hub</span>
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-steel-950 tracking-tighter leading-tight">Industrial insights</h2>
              </div>
-             <Link to="/blog" className="text-steel-950 font-black flex items-center gap-3 group text-base md:text-2xl hover:text-primary transition-colors">
+             <Link to="/blog" className="text-steel-950 font-black flex items-center gap-3 group text-base md:text-xl hover:text-primary transition-colors">
                 Explore Learning Center <ArrowRight size={24} className="group-hover:translate-x-3 transition-transform" />
              </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {posts.map((post, i) => (
               <motion.div 
                 key={post.id || post.slug}
@@ -386,21 +357,21 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-40 px-4">
+      <section className="py-10 md:py-16 px-4">
         <div className="container-custom">
-          <div className="bg-steel-950 rounded-[32px] md:rounded-[80px] p-8 md:p-32 relative overflow-hidden group shadow-2xl">
+          <div className="bg-steel-950 rounded-[32px] md:rounded-[80px] p-8 md:p-16 lg:p-20 relative overflow-hidden group shadow-2xl">
             <div className="relative z-10 max-w-4xl">
-              <span className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-[11px] mb-8 md:mb-10 block">Ready to start?</span>
-              <h2 className="text-3xl md:text-6xl lg:text-7xl font-black text-white mb-8 md:mb-12 tracking-tight leading-[1]">Your partner in high-grade <br className="hidden md:block" /> stainless steel</h2>
-              <p className="text-steel-300 text-base md:text-2xl mb-10 md:mb-16 font-medium leading-relaxed opacity-80 max-w-2xl">
+              <span className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-[11px] mb-6 md:mb-8 block">Ready to start?</span>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-6 md:mb-10 tracking-tight leading-[1]">Your partner in high-grade <br className="hidden md:block" /> stainless steel</h2>
+              <p className="text-steel-300 text-base md:text-xl mb-8 md:mb-12 font-medium leading-relaxed opacity-80 max-w-2xl">
                 Connect with our technical engineers for material selection and competitive bulk pricing. 
                 Experience 40+ years of industrial excellence.
               </p>
-              <div className="flex flex-col sm:flex-row gap-5 md:gap-6">
-                <Link to="/contact" className="w-full sm:w-auto text-center px-10 py-5 md:px-12 md:py-6 bg-primary text-white font-black text-sm md:text-lg rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-primary/40 uppercase tracking-widest">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-5">
+                <Link to="/contact" className="w-full sm:w-auto text-center px-8 py-4 md:px-10 md:py-5 bg-primary text-white font-black text-sm md:text-lg rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-primary/40 uppercase tracking-widest">
                   Connect with Sales
                 </Link>
-                <a href="tel:+914422334455" className="w-full sm:w-auto text-center px-10 py-5 md:px-12 md:py-6 border-2 border-white/20 text-white font-black text-sm md:text-lg rounded-2xl hover:bg-white/10 active:scale-95 transition-all flex items-center justify-center gap-3 backdrop-blur-sm">
+                <a href="tel:+914422334455" className="w-full sm:w-auto text-center px-8 py-4 md:px-10 md:py-5 border-2 border-white/20 text-white font-black text-sm md:text-lg rounded-2xl hover:bg-white/10 active:scale-95 transition-all flex items-center justify-center gap-3 backdrop-blur-sm">
                   <Phone size={22} /> Instant Support
                 </a>
               </div>

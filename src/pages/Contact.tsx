@@ -6,76 +6,75 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
       {/* Premium Header */}
-      <section className="py-6 md:py-8 px-4 overflow-hidden relative bg-white">
+      <section className="py-2 md:py-4 px-4 overflow-hidden relative bg-white">
         <div className="container-custom relative z-10">
-          <div className="flex flex-col lg:flex-row justify-between items-end gap-12 border-b border-steel-100 pb-6 md:pb-8">
-            <div className="max-w-2xl">
+          <div className="flex flex-col lg:flex-row justify-between items-end gap-6 border-b border-steel-100 pb-2 md:pb-4">
+            <div className="max-w-xl">
               <motion.span 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="text-steel-400 font-bold tracking-[0.2em] uppercase text-[9px] mb-4 md:mb-6 block"
+                className="text-steel-400 font-bold tracking-[0.2em] uppercase text-[9px] mb-3 md:mb-4 block"
               >
                 Inquiry & Support Center
               </motion.span>
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-3xl md:text-5xl font-extrabold text-steel-950 mb-0 leading-[1.1] md:leading-[1] tracking-tighter"
+                className="text-2xl md:text-3xl font-extrabold text-steel-950 mb-0 leading-[1.1] md:leading-[1] tracking-tighter"
               >
                 Connect <span className="text-steel-300 font-light italic">With</span> <br />
                 Our Experts.
               </motion.h1>
-              <div className="mt-8 md:mt-10 rounded-[28px] overflow-hidden aspect-[21/9] shadow-lg">
+              <div className="mt-4 md:mt-6 rounded-[20px] overflow-hidden aspect-[21/9] shadow-md max-w-xl">
                  <img src={p7} alt="Facility" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" />
               </div>
             </div>
-            <div className="bg-steel-950 text-white px-10 py-8 rounded-[40px] shadow-2xl max-w-sm">
-              <p className="text-xs font-bold uppercase tracking-widest text-steel-400 mb-4">Response Time</p>
-              <p className="text-lg font-bold">Guaranteed technical response within <span className="text-steel-300">4 Hours</span> for industrial accounts.</p>
+            <div className="bg-steel-950 text-white px-6 py-4 rounded-[24px] shadow-xl max-w-xs mt-4 lg:mt-0">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-steel-400 mb-2">Response Time</p>
+              <p className="text-sm font-bold">Guaranteed technical response within <span className="text-steel-300">4 Hours</span> for industrial accounts.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-16 md:py-24 px-4">
+      <section className="py-6 md:py-10 px-4">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10">
             {/* Info Section */}
-            <div className="lg:col-span-5 space-y-16">
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-steel-950 tracking-tight uppercase leading-none">Contact Information</h2>
-                <p className="text-steel-500 font-medium leading-relaxed max-w-md">
+            <div className="lg:col-span-5 space-y-6">
+              <div className="space-y-3">
+                <h2 className="text-xl font-bold text-steel-950 tracking-tight uppercase leading-none">Contact Information</h2>
+                <p className="text-steel-500 font-medium leading-relaxed max-w-md text-xs md:text-sm">
                    Visit our regional distribution hub or reach out via phone or email for immediate assistance with your orders.
                 </p>
               </div>
 
-              <div className="grid gap-8">
+              <div className="grid gap-4">
                 {[
-                  { icon: Phone, label: "Fast Assistance", info: "+91 44 2233 4455", sub: "Priority Industrial Line" },
-                  { icon: Mail, label: "Technical Support", info: "info@sidharthsteel.com", sub: "Material Analysis Support" },
-                  { icon: MapPin, label: "Global Distribution", info: "Chennai, South India", sub: "Main Operations Center" }
+                  { icon: Phone, label: "Fast Assistance", info: "+91 44 2233 4455", sub: "Priority Line" },
+                  { icon: Mail, label: "Technical Support", info: "info@sidharthsteel.com", sub: "Material Analysis" },
+                  { icon: MapPin, label: "Distribution Hub", info: "Chennai, South India", sub: "Operations Center" }
                 ].map((item, i) => (
                   <motion.div 
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex items-center gap-8 p-10 bg-white border border-steel-100 rounded-[48px] shadow-sm hover:shadow-xl transition-all"
+                    className="flex items-center gap-4 md:gap-6 p-4 md:p-6 bg-white border border-steel-100 rounded-[20px] md:rounded-[32px] shadow-sm hover:shadow-lg transition-all"
                   >
-                    <div className="w-16 h-16 bg-steel-950 text-white rounded-[24px] flex items-center justify-center shadow-lg">
-                      <item.icon size={28} />
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-steel-950 text-white rounded-[12px] md:rounded-[16px] flex items-center justify-center shadow-lg shrink-0">
+                      <item.icon size={18} />
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-steel-300 mb-2">{item.label}</p>
-                      <h4 className="text-xl font-bold text-steel-950 mb-1">
+                      <p className="text-[8px] font-bold uppercase tracking-widest text-steel-300 mb-1">{item.label}</p>
+                      <h4 className="text-sm md:text-base font-bold text-steel-950">
                         {item.icon === Phone ? (
                           <a href={`tel:${item.info.replace(/\s+/g, '')}`} className="hover:text-primary transition-colors">{item.info}</a>
                         ) : item.icon === Mail ? (
                           <a href={`mailto:${item.info}`} className="hover:text-primary transition-colors">{item.info}</a>
                         ) : item.info}
                       </h4>
-                      <p className="text-xs text-steel-400 font-bold uppercase tracking-widest">{item.sub}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -88,59 +87,59 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               className="lg:col-span-7"
             >
-              <div className="bg-white border border-steel-100 shadow-2xl rounded-[32px] md:rounded-[64px] p-8 md:p-20">
-                 <h3 className="text-2xl font-bold text-steel-950 mb-10 md:mb-12 tracking-tight">Request Specification Support</h3>
-                 <form className="space-y-8 md:space-y-10" onSubmit={(e) => e.preventDefault()}>
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-                     <div className="space-y-4">
-                       <label className="text-[10px] font-bold uppercase tracking-widest text-steel-400">Full Name</label>
+              <div className="bg-white border border-steel-100 shadow-xl rounded-[24px] md:rounded-[32px] p-6 md:p-8">
+                 <h3 className="text-xl font-bold text-steel-950 mb-4 md:mb-6 tracking-tight">Request Specification Support</h3>
+                 <form className="space-y-4 md:space-y-6" onSubmit={(e) => e.preventDefault()}>
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                     <div className="space-y-2">
+                       <label className="text-[9px] font-bold uppercase tracking-widest text-steel-400">Full Name</label>
                        <input 
                          type="text" 
-                         placeholder="e.g. Johnathan Smith" 
-                         className="w-full px-0 py-4 bg-transparent border-b-2 border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-sm font-bold text-steel-950 placeholder:text-steel-200"
+                         placeholder="e.g. John Smith" 
+                         className="w-full px-0 py-2 bg-transparent border-b border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-sm font-bold text-steel-950 placeholder:text-steel-200"
                        />
                      </div>
-                     <div className="space-y-4">
-                       <label className="text-[10px] font-bold uppercase tracking-widest text-steel-400">Professional Email</label>
+                     <div className="space-y-2">
+                       <label className="text-[9px] font-bold uppercase tracking-widest text-steel-400">Professional Email</label>
                        <input 
                          type="email" 
-                         placeholder="e.g. smith@enterprise.com" 
-                         className="w-full px-0 py-4 bg-transparent border-b-2 border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-sm font-bold text-steel-950 placeholder:text-steel-200"
+                         placeholder="e.g. smith@corp.com" 
+                         className="w-full px-0 py-2 bg-transparent border-b border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-sm font-bold text-steel-950 placeholder:text-steel-200"
                        />
                      </div>
                    </div>
                    
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                     <div className="space-y-4">
-                       <label className="text-[10px] font-bold uppercase tracking-widest text-steel-400">Inquiry Target</label>
-                       <select className="w-full px-0 py-4 bg-transparent border-b-2 border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-sm font-bold text-steel-950 appearance-none">
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                     <div className="space-y-2">
+                       <label className="text-[9px] font-bold uppercase tracking-widest text-steel-400">Inquiry Target</label>
+                       <select className="w-full px-0 py-2 bg-transparent border-b border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-xs font-bold text-steel-950 appearance-none">
                          <option>Material Specification</option>
                          <option>Inventory Availability</option>
                          <option>Technical Consultation</option>
                          <option>General Quotation</option>
                        </select>
                      </div>
-                     <div className="space-y-4">
-                       <label className="text-[10px] font-bold uppercase tracking-widest text-steel-400">Urgency Level</label>
-                       <select className="w-full px-0 py-4 bg-transparent border-b-2 border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-sm font-bold text-steel-950 appearance-none">
+                     <div className="space-y-2">
+                       <label className="text-[9px] font-bold uppercase tracking-widest text-steel-400">Urgency Level</label>
+                       <select className="w-full px-0 py-2 bg-transparent border-b border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-xs font-bold text-steel-950 appearance-none">
                          <option>Normal (Routine)</option>
                          <option>High (Next 48H)</option>
-                         <option>Critical (Operational Stop)</option>
+                         <option>Critical (Op-Stop)</option>
                        </select>
                      </div>
                    </div>
 
-                   <div className="space-y-4">
-                     <label className="text-[10px] font-bold uppercase tracking-widest text-steel-400">Detailed Message</label>
+                   <div className="space-y-2">
+                     <label className="text-[9px] font-bold uppercase tracking-widest text-steel-400">Detailed Message</label>
                      <textarea 
-                       rows={5}
-                       placeholder="Provide technical details about your project or material requirement..." 
-                       className="w-full px-0 py-4 bg-transparent border-b-2 border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-sm font-bold text-steel-950 placeholder:text-steel-200 resize-none"
+                       rows={4}
+                       placeholder="Provide technical details about your project..." 
+                       className="w-full px-0 py-2 bg-transparent border-b border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-xs font-bold text-steel-950 placeholder:text-steel-200 resize-none"
                      ></textarea>
                    </div>
 
-                   <button className="w-full py-6 bg-steel-950 text-white font-bold rounded-2xl hover:scale-[1.02] transition-all flex items-center justify-center gap-4 shadow-2xl">
-                     Transmit Request <Send size={20} />
+                   <button className="w-full py-4 bg-steel-950 text-white font-bold rounded-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-3 shadow-lg text-sm">
+                     Transmit Request <Send size={18} />
                    </button>
                  </form>
               </div>

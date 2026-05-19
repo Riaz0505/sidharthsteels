@@ -33,21 +33,21 @@ export default function Navbar() {
       <nav
         className={cn(
           "fixed top-0 left-0 right-0 w-full z-[150] transition-all duration-300",
-          isScrolled ? "bg-white shadow-lg py-1.5" : "bg-white/95 backdrop-blur-md border-b border-steel-100 py-2.5"
+          isScrolled ? "bg-white shadow-lg py-1" : "bg-white/95 backdrop-blur-md border-b border-steel-100 py-2 md:py-3"
         )}
       >
-        <div className="w-full px-4 md:px-10">
+        <div className="w-full px-4 md:px-10 lg:px-16">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center group py-0.5">
               <img 
                 src={logo} 
                 alt="Logo" 
-                className="h-10 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                className="h-8 md:h-12 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </Link>
   
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center space-x-12">
+            <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <div 
                   key={link.name} 
