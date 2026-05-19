@@ -94,13 +94,13 @@ export default function BlogPost() {
       </section>
 
       {/* Hero Image - Immersive Width */}
-      <div className="bg-white pb-32">
+      <div className="bg-white pb-16 md:pb-32">
         <div className="container-custom max-w-7xl px-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative rounded-[64px] overflow-hidden shadow-2xl h-[500px] md:h-[700px]"
+            className="relative rounded-[32px] md:rounded-[64px] overflow-hidden shadow-2xl h-[300px] md:h-[700px]"
           >
             <img 
               src={post.image} 
@@ -108,7 +108,7 @@ export default function BlogPost() {
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 border-[20px] border-white/10 rounded-[64px] pointer-events-none" />
+            <div className="absolute inset-0 border-[10px] md:border-[20px] border-white/10 rounded-[32px] md:rounded-[64px] pointer-events-none" />
           </motion.div>
         </div>
       </div>
@@ -131,7 +131,7 @@ export default function BlogPost() {
                        </div>
                     </div>
                     <p className="text-sm text-steel-500 font-medium leading-relaxed italic">
-                      "Bringing 25 years of industrial steel expertise to help our partners succeed through knowledge."
+                      "Bringing 40 years of industrial steel expertise to help our partners succeed through knowledge."
                     </p>
                   </div>
 
@@ -153,7 +153,7 @@ export default function BlogPost() {
                </div>
             </aside>
 
-            <article className="lg:w-2/3 bg-white p-8 md:p-20 lg:p-28 rounded-[40px] md:rounded-[64px] lg:rounded-[80px] shadow-sm border border-steel-100 min-h-[800px]">
+            <article className="lg:w-2/3 bg-white p-6 md:p-20 lg:p-28 rounded-[32px] md:rounded-[64px] lg:rounded-[80px] shadow-sm border border-steel-100 min-h-[500px]">
               <div className="prose-blog">
                 <ReactMarkdown>{post.content.trim()}</ReactMarkdown>
               </div>

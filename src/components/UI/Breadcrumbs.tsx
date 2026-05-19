@@ -18,14 +18,14 @@ export default function Breadcrumbs() {
     <div id="breadcrumbs-container" className="pt-4 pb-2 bg-[#F8F9FA]/50">
       <div className="container-custom">
         <nav className="flex" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-steel-400">
+          <ol className="flex items-center flex-wrap gap-y-2 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-steel-400">
             <li>
               <Link 
                 to="/" 
                 className="hover:text-primary transition-colors flex items-center gap-1.5"
               >
                 <Home size={14} />
-                <span>Home</span>
+                <span className="hidden xs:inline">Home</span>
               </Link>
             </li>
             {pathnames.map((value, index) => {
@@ -34,21 +34,19 @@ export default function Breadcrumbs() {
               
               // Custom title mapping
               let displayTitle = value.replace(/-/g, ' ');
-              if (value === 'services' && service) {
-                // If it's the services part and we have a specific service, 
-                // we might want to show "Services / Title"
-              }
 
               return (
-                <li key={to} className="flex items-center space-x-2">
-                  <span className="text-steel-200">/</span>
+                <li key={to} className="flex items-center">
+                  <ChevronRight size={12} className="mx-2 text-steel-200" />
                   {last && !service ? (
-                    <span className="text-primary font-black uppercase truncate max-w-[120px] md:max-w-none">{displayTitle}</span>
+                    <span className="text-primary font-black uppercase">
+                      {displayTitle}
+                    </span>
                   ) : (
                     <Link 
                       to={to} 
                       className={cn(
-                        "hover:text-primary transition-colors uppercase truncate max-w-[100px] md:max-w-none",
+                        "hover:text-primary transition-colors uppercase",
                         last && service ? "text-steel-400" : ""
                       )}
                     >
@@ -61,9 +59,9 @@ export default function Breadcrumbs() {
             
             {/* Additional segment for specific service */}
             {location.pathname === '/services' && service && (
-              <li className="flex items-center space-x-2">
-                <span className="text-steel-200">/</span>
-                <span className="text-primary font-black uppercase truncate max-w-[150px] md:max-w-none">
+              <li className="flex items-center">
+                <ChevronRight size={12} className="mx-2 text-steel-200" />
+                <span className="text-primary font-black uppercase">
                   {service.title}
                 </span>
               </li>

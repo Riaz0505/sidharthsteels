@@ -19,21 +19,21 @@ export default function Services() {
 
   if (!currentService) {
     return (
-      <div className="min-h-screen bg-[#F8F9FA] py-12 md:py-20 px-4">
+      <div className="min-h-screen bg-[#F8F9FA] py-8 md:py-24 px-4">
         <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+          <div className="text-left max-w-4xl mb-8 md:mb-24">
             <motion.span 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-sm mb-4 block"
+              className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-sm mb-4 md:mb-6 block"
             >
-              Certified Solutions
+              Certified Industry Solutions
             </motion.span>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl font-black text-steel-950 tracking-tighter uppercase mb-6"
+              className="text-3xl md:text-6xl lg:text-7xl font-black text-steel-950 tracking-tighter capitalize mb-8 md:mb-10 leading-[1]"
             >
               Material Catalog
             </motion.h1>
@@ -41,36 +41,40 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-steel-500 font-medium text-sm md:text-lg leading-relaxed"
+              className="text-steel-500 font-medium text-base md:text-2xl leading-relaxed max-w-3xl"
             >
               Explore South India's most comprehensive inventory of premium stainless steel, 
               sourced from global tier-1 mills for mission-critical applications.
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {SERVICES.map((s, i) => (
               <motion.div 
                 key={s.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="group relative h-[400px] md:h-[450px] rounded-[32px] md:rounded-[48px] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 bg-steel-950"
+                className="group relative h-[380px] md:h-[550px] rounded-[32px] md:rounded-[48px] overflow-hidden shadow-2xl hover:shadow-primary/10 transition-all duration-700 bg-steel-950"
               >
                 <img 
                   src={s.image} 
                   alt={s.title} 
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms] brightness-50 grayscale hover:grayscale-0"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[3000ms] brightness-[0.4] grayscale group-hover:grayscale-0"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 z-10">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight group-hover:text-primary transition-colors">{s.title}</h3>
+                <div className="absolute bottom-0 left-0 right-0 p-10 md:p-12 z-10">
+                   <span className="text-primary text-[10px] font-black uppercase tracking-[0.3em] mb-4 block">Certified Grade</span>
+                  <h3 className="text-3xl md:text-4xl font-black text-white mb-6 leading-tight group-hover:text-primary transition-colors tracking-tight">{s.title}</h3>
+                  <p className="text-steel-300 text-sm md:text-base mb-10 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 line-clamp-2">
+                    {s.description}
+                  </p>
                   <Link 
                     to={`/services?id=${s.id}`} 
-                    className="inline-flex items-center gap-3 px-6 py-3 bg-white text-steel-950 font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all shadow-lg"
+                    className="w-full py-5 bg-white text-steel-950 font-black rounded-2xl text-sm flex items-center justify-center gap-3 hover:translate-x-3 transition-transform shadow-2xl uppercase tracking-widest"
                   >
-                    View Specifications <ArrowRight size={18} />
+                    Specifications <ArrowRight size={20} />
                   </Link>
                 </div>
               </motion.div>
@@ -78,24 +82,25 @@ export default function Services() {
           </div>
 
           {/* Catalog Footer CTA */}
-          <div className="mt-20 md:mt-32 text-center bg-steel-950 rounded-[40px] p-10 md:p-20 text-white relative overflow-hidden">
-            <div className="relative z-10 max-w-2xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Need a Custom Quote?</h2>
-              <p className="text-steel-400 font-medium mb-10 text-sm md:text-lg">
+          <div className="mt-16 md:mt-40 text-left bg-steel-950 rounded-[32px] md:rounded-[64px] p-8 md:p-32 text-white relative overflow-hidden shadow-2xl shadow-primary/20">
+            <div className="relative z-10 max-w-4xl">
+              <span className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-[11px] mb-8 md:mb-10 block">Material Request</span>
+              <h2 className="text-3xl md:text-7xl font-black mb-8 md:mb-10 tracking-tight leading-[1] capitalize">Need a custom bulk quote?</h2>
+              <p className="text-steel-400 font-medium mb-10 md:mb-16 text-base md:text-2xl leading-relaxed italic opacity-80">
                 Our inventory updates daily. Connect with our sales engineering team for 
                 bulk pricing and logistical planning for your manufacturing floor.
               </p>
-              <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                <Link to="/contact" className="px-10 py-5 bg-primary text-white font-bold rounded-2xl flex items-center justify-center gap-3 hover:scale-105 transition-transform shadow-lg">
-                  Submit RFQ <ArrowRight size={20} />
+              <div className="flex flex-col sm:flex-row gap-6">
+                <Link to="/contact" className="px-12 py-6 bg-primary text-white font-black rounded-2xl flex items-center justify-center gap-4 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 uppercase tracking-widest text-sm md:text-base">
+                  Submit RFQ <ArrowRight size={24} />
                 </Link>
-                <a href="tel:+914422334455" className="px-10 py-5 border-2 border-white/20 font-bold rounded-2xl hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
-                  <Phone size={18} /> Call Specialist
+                <a href="tel:+914422334455" className="px-12 py-6 border-2 border-white/20 font-black rounded-2xl hover:bg-white/10 transition-all flex items-center justify-center gap-3 uppercase tracking-widest text-sm md:text-base">
+                  <Phone size={20} /> Call Specialist
                 </a>
               </div>
             </div>
-            <div className="absolute -top-24 -left-24 w-64 h-64 bg-primary/20 rounded-full blur-[120px]" />
-            <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-steel-800/30 rounded-full blur-[120px]" />
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent skew-x-12 translate-x-1/2" />
+            <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[180px] opacity-20" />
           </div>
         </div>
       </div>
@@ -197,20 +202,20 @@ export default function Services() {
               </motion.div>
  
               {/* Title and Intro */}
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <motion.h2 
                   key={`${serviceId}-title`}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="text-2xl md:text-3xl font-black text-steel-950 tracking-tight uppercase"
+                  className="text-3xl md:text-5xl lg:text-6xl font-black text-steel-950 tracking-tight capitalize leading-tight"
                 >
-                  {currentService.title} Supplier in Chennai
+                  {currentService.title} supplier in Chennai
                 </motion.h2>
                 <motion.p 
                   key={`${serviceId}-desc`}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="text-steel-600 text-[14px] md:text-[16px] leading-relaxed font-medium"
+                  className="text-steel-500 text-lg md:text-2xl leading-[1.6] font-medium"
                 >
                   {currentService.description}
                 </motion.p>

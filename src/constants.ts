@@ -351,5 +351,5 @@ export const ACHIEVEMENTS = [
   { label: "Chain of Factories", value: "1+" },
   { label: "Worldwide Partners", value: "100+" },
   { label: "Engineering Projects", value: "1.1k+" },
-  { label: "Years of Trust", value: "25+" }
+  { label: "Years of Trust", value: "40+" }
 ];

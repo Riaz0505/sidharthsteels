@@ -68,7 +68,13 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-widest text-steel-300 mb-2">{item.label}</p>
-                      <h4 className="text-xl font-bold text-steel-950 mb-1">{item.info}</h4>
+                      <h4 className="text-xl font-bold text-steel-950 mb-1">
+                        {item.icon === Phone ? (
+                          <a href={`tel:${item.info.replace(/\s+/g, '')}`} className="hover:text-primary transition-colors">{item.info}</a>
+                        ) : item.icon === Mail ? (
+                          <a href={`mailto:${item.info}`} className="hover:text-primary transition-colors">{item.info}</a>
+                        ) : item.info}
+                      </h4>
                       <p className="text-xs text-steel-400 font-bold uppercase tracking-widest">{item.sub}</p>
                     </div>
                   </motion.div>
@@ -82,10 +88,10 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               className="lg:col-span-7"
             >
-              <div className="bg-white border border-steel-100 shadow-2xl rounded-[64px] p-12 md:p-20">
-                 <h3 className="text-2xl font-bold text-steel-950 mb-12 tracking-tight">Request Specification Support</h3>
-                 <form className="space-y-10" onSubmit={(e) => e.preventDefault()}>
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div className="bg-white border border-steel-100 shadow-2xl rounded-[32px] md:rounded-[64px] p-8 md:p-20">
+                 <h3 className="text-2xl font-bold text-steel-950 mb-10 md:mb-12 tracking-tight">Request Specification Support</h3>
+                 <form className="space-y-8 md:space-y-10" onSubmit={(e) => e.preventDefault()}>
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                      <div className="space-y-4">
                        <label className="text-[10px] font-bold uppercase tracking-widest text-steel-400">Full Name</label>
                        <input 
