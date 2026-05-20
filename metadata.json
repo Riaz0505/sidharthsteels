@@ -2,5 +2,5 @@
   "name": "Sidharth Steels",
   "description": "Official website for Sidharth Steels, a trusted stainless steel dealer and stockist in Chennai, featuring a dynamic blog and admin panel.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

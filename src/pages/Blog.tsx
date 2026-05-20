@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { BLOG_POSTS as STATIC_POSTS } from "../constants";
-import { ArrowRight, Clock, User, Filter, Loader2 } from "lucide-react";
+import { ArrowRight, Clock, User, Filter, Loader2, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { dbService } from "../services/dbService";
@@ -60,8 +60,8 @@ export default function Blog() {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-4xl md:text-6xl lg:text-8xl font-black font-display text-steel-950 leading-[0.9] tracking-tighter"
               >
-                Metal <span className="text-steel-300 font-light italic">insights</span> <br />
-                & market report
+                Metal Insights <br />
+                & Market Report
               </motion.h1>
             </div>
           </div>
@@ -115,31 +115,6 @@ export default function Blog() {
             ))}
           </div>
 
-          {/* Newsletter / CTA Section within Grid */}
-          <div className="mt-10 md:mt-16">
-            <div className="bg-steel-950 rounded-[32px] md:rounded-[48px] p-8 md:p-16 text-center relative overflow-hidden">
-               <div className="relative z-10 max-w-2xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Stay ahead of the curve.</h2>
-                  <p className="text-steel-400 text-base md:text-lg font-medium mb-8 leading-relaxed italic">
-                    Weekly technical updates and material pricing reports delivered home.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                     <input 
-                       type="email" 
-                       placeholder="Enter email" 
-                       className="flex-grow px-6 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-medium focus:outline-none focus:border-white/30 transition-all text-sm"
-                     />
-                     <button className="px-8 py-4 bg-white text-steel-950 font-bold rounded-xl hover:scale-105 transition-transform shrink-0 text-sm">
-                       Subscribe
-                     </button>
-                  </div>
-               </div>
-               <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white rounded-full" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white rounded-full opacity-40" />
-               </div>
-            </div>
-          </div>
         </div>
       </section>
     </div>

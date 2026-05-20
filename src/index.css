@@ -15,7 +15,7 @@
   --color-steel-700: #374151;
   --color-steel-800: #1f2937;
   --color-steel-900: #111827;
-  --color-steel-950: #030712;
+  --color-steel-950: #111215; /* Premium Charcoal/Titanium Dark Slate (Matches Logo Gray theme elegantly) */
 
   --color-brand-red-50: #fef2f2;
   --color-brand-red-100: #fee2e2;
@@ -49,22 +49,22 @@
     @apply font-sans max-w-none;
   }
   .prose-blog h1 {
-    @apply font-display text-3xl md:text-6xl font-black text-steel-950 mb-8 mt-16 leading-[1.1] tracking-tight;
+    @apply font-display text-2xl md:text-4xl lg:text-5xl font-black text-steel-950 mb-6 mt-12 leading-[1.1] tracking-tight;
   }
   .prose-blog h2 {
-    @apply font-display text-2xl md:text-5xl font-black text-steel-950 mb-6 mt-12 leading-tight tracking-tight;
+    @apply font-display text-xl md:text-3xl lg:text-4xl font-black text-steel-950 mb-5 mt-10 leading-tight tracking-tight;
   }
   .prose-blog h3 {
-    @apply font-display text-xl md:text-3xl font-black text-steel-950 mb-4 mt-10 leading-tight tracking-tight;
+    @apply font-display text-lg md:text-2xl lg:text-3xl font-black text-steel-950 mb-4 mt-8 leading-tight tracking-tight;
   }
   .prose-blog p {
-    @apply text-steel-600 text-lg md:text-2xl leading-[1.8] font-medium mb-10;
+    @apply text-steel-600 text-[15px] md:text-[17px] lg:text-lg leading-[1.7] md:leading-[1.8] font-medium mb-8;
   }
   .prose-blog ul {
     @apply list-none ml-0 mb-10 space-y-6;
   }
   .prose-blog li {
-    @apply text-steel-600 text-lg md:text-xl font-medium leading-relaxed pl-10 relative;
+    @apply text-steel-600 text-sm md:text-base lg:text-[17px] font-medium leading-relaxed pl-8 relative;
   }
   .prose-blog li::before {
     content: "•";
@@ -74,7 +74,7 @@
     @apply list-decimal list-outside ml-8 mb-10 space-y-6;
   }
   .prose-blog ol li {
-    @apply text-lg md:text-xl pl-4;
+    @apply text-sm md:text-base lg:text-[17px] pl-4;
   }
   .prose-blog ol li::before {
     content: none;
@@ -83,7 +83,7 @@
     @apply font-black text-steel-950;
   }
   .prose-blog blockquote {
-    @apply pl-10 py-6 border-l-[12px] border-primary italic text-steel-600 my-16 bg-steel-50 rounded-r-[48px] text-xl md:text-3xl font-bold leading-relaxed;
+    @apply pl-8 py-4 border-l-[8px] border-primary italic text-steel-600 my-10 bg-steel-50 rounded-r-3xl text-lg md:text-xl font-bold leading-relaxed;
   }
   .prose-blog pre {
     @apply bg-[#050520] text-white p-10 rounded-[40px] my-12 overflow-x-auto text-sm md:text-base font-mono shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)];

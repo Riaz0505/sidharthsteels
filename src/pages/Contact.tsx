@@ -1,44 +1,11 @@
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import p7 from "../assets/p7.jpg";
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
-      {/* Premium Header */}
-      <section className="py-2 md:py-4 px-4 overflow-hidden relative bg-white">
-        <div className="container-custom relative z-10">
-          <div className="flex flex-col lg:flex-row justify-between items-end gap-6 border-b border-steel-100 pb-2 md:pb-4">
-            <div className="max-w-xl">
-              <motion.span 
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="text-steel-400 font-bold tracking-[0.2em] uppercase text-[9px] mb-3 md:mb-4 block"
-              >
-                Inquiry & Support Center
-              </motion.span>
-              <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-2xl md:text-3xl font-extrabold text-steel-950 mb-0 leading-[1.1] md:leading-[1] tracking-tighter"
-              >
-                Connect <span className="text-steel-300 font-light italic">With</span> <br />
-                Our Experts.
-              </motion.h1>
-              <div className="mt-4 md:mt-6 rounded-[20px] overflow-hidden aspect-[21/9] shadow-md max-w-xl">
-                 <img src={p7} alt="Facility" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" />
-              </div>
-            </div>
-            <div className="bg-steel-950 text-white px-6 py-4 rounded-[24px] shadow-xl max-w-xs mt-4 lg:mt-0">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-steel-400 mb-2">Response Time</p>
-              <p className="text-sm font-bold">Guaranteed technical response within <span className="text-steel-300">4 Hours</span> for industrial accounts.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Main Content */}
-      <section className="py-6 md:py-10 px-4">
+      <section className="py-8 md:py-14 px-4">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10">
             {/* Info Section */}
@@ -138,8 +105,8 @@ export default function Contact() {
                      ></textarea>
                    </div>
 
-                   <button className="w-full py-4 bg-steel-950 text-white font-bold rounded-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-3 shadow-lg text-sm">
-                     Transmit Request <Send size={18} />
+                   <button className="w-full py-2.5 bg-steel-950 text-white font-bold rounded-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2 shadow-md text-xs md:text-[13px] uppercase tracking-wider">
+                     Transmit Request <Send size={14} />
                    </button>
                  </form>
               </div>
