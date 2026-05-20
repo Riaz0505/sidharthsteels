@@ -38,11 +38,11 @@ export default function Navbar() {
       >
         <div className="w-full px-4 md:px-8 lg:px-12">
           <div className="flex justify-between items-center">
-            <Link to="/" className="flex items-center group py-0.5">
+            <Link to="/" className="flex items-center group py-1">
               <img 
                 src={logo} 
                 alt="Logo" 
-                className="h-7 md:h-10 lg:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                className="h-10 md:h-14 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </Link>
   
