@@ -46,7 +46,7 @@ export default function Blog() {
       {/* Editorial Header Section */}
       <section id="blog-header" className="py-8 md:py-12 px-4 overflow-hidden relative bg-white">
         <div className="container-custom">
-          <div className="flex flex-col lg:flex-row justify-between items-end gap-6 mb-6 md:mb-10">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-6 mb-6 md:mb-10">
             <div className="max-w-4xl">
               <motion.span 
                 initial={{ opacity: 0, x: -20 }}
