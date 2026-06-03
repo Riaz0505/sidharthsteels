@@ -12,53 +12,53 @@ export const TAGLINE = "Trusted Stainless Steel Dealer & Stockist in Chennai";
 export const SERVICES = [
   {
     id: "sheets-coils",
-    title: "Stainless Steel Sheets Coils",
+    title: "Stainless Steel Sheets & Coils",
     subtitle: "Leading Stainless Steel Sheets Supplier in Chennai",
-    description: "Sidharth Steels is a trusted stainless steel sheets supplier in Chennai, offering high-quality industrial-grade sheets and coils for construction, fabrication, and manufacturing sectors across South India. As a leading stainless steel dealer and stockist, we provide stainless steel sheets in various grades, thicknesses, finishes, and dimensions to meet diverse industrial requirements. Our focus is on consistent quality, competitive pricing, and timely delivery for bulk and project-based orders.",
+    description: "Sidharth Steels is a trusted stainless steel sheets and coils supplier in Chennai, offering high-quality flat-rolled products. These pieces are widely used across industries for their outstanding corrosion resistance, strength, and hygienic surface finish. Sourced strictly from ISO accredited reputable mills, all sheets and coils conform to ASTM, ASME, EN, and IS standards, and come with verified Mill Test Certificates (MTCs).",
     features: [
-       "Multiple thickness options",
-       "Standard and customized sizes",
-       "Different finishes (matte, polished, industrial finish)",
-       "Industrial-grade material suitable for heavy-duty use",
-       "Structural fabrication",
-       "Industrial equipment manufacturing",
-       "Commercial construction projects",
-       "Food processing setups",
-       "Pharmaceutical applications"
+      "Optimal low-carbon grades 304L & 316L for reduced risk of corrosion after welding",
+      "Available across widths 1000mm, 1219mm, 1500mm, and custom client dimensions",
+      "Wide range of finishes: No.1, 2B, BA, No.4, HL (Hairline), and Mirror Polished",
+      "Rigorous physical inspection and composition verification on release",
+      "Structural fabrication",
+      "Industrial equipment manufacturing",
+      "Commercial construction projects",
+      "Food processing setups",
+      "Pharmaceutical-grade applications"
     ],
     whyChooseUs: [
-      "Trusted Stainless Steel Dealer in Chennai",
-      "Ready Stock for Bulk Orders",
-      "Competitive Market Pricing",
-      "Quick Delivery Across Tamil Nadu",
-      "Support for Industrial & Fabrication Projects"
+      "Over 40 Years of Trusted Metallurgical Experience",
+      "Authentic Mill Test Certificates (MTC) Provided",
+      "Competitive Direct Pricing with Low Lead Times",
+      "Ready Stock for Commercial Fabrications",
+      "Accurate Gauge and Dimensional Uniformity"
     ],
     applications: [
-      "Construction and infrastructure projects",
-      "Industrial manufacturing units",
-      "Fabrication and engineering works",
-      "Food and pharmaceutical industries",
-      "Architectural and decorative applications"
+      "Coastal Chemical & Processing Plants",
+      "Pharmaceutical Cladding & Conveyance Systems",
+      "Commercial Kitchen & Catering Infrastructure",
+      "Architectural Trim & Elevators",
+      "Aviation & Automotive Elements"
     ],
     technical: {
-      grades: ["304", "304L", "316", "316L", "202", "310", "430"],
-      thickness: "0.3mm to 100mm",
-      finish: "2B, No.4, Mirror, Satin, BA",
-      standards: "ASTM A240, ASME SA240",
-      usage: "Kitchenware, Chemical Plants, Food Processing"
+      grades: ["304", "304L", "316", "316L", "201", "430"],
+      thickness: "0.3mm to 25mm",
+      finish: "No.1, 2B, BA, No.4, HL, Mirror",
+      standards: "ASTM A240, ASME SA240, EN, IS",
+      usage: "Aesthetics, Kitchenware, Coastal Plants, Machinery"
     },
     faqs: [
       {
-        question: "Who is the best stainless steel sheet supplier in Chennai?",
-        answer: "Sidharth Steels is a leading supplier with decades of expertise and a vast stock of all grades."
+        question: "What is the difference between 304L and 316L stainless steel sheets?",
+        answer: "304L is a cost-effective, general-purpose grade suitable for most indoor and light outdoor applications. 316L contains 2-3% molybdenum, which gives it significantly better resistance to pitting, salt, chlorides, and harsh chemicals — making it ideal for coastal areas, marine environments, and chemical plants."
       },
       {
-        question: "What thickness options are available in stainless steel sheets?",
-        answer: "We offer sheets ranging from 0.3mm to 100mm depending on the grade and application."
+        question: "Do you supply stainless steel sheets in Chennai for small quantities?",
+        answer: "Yes. Sidharth Steels caters to both large-scale industrial projects and smaller fabricators. We offer tailored cut-to-size service so you only pay for what your specification needs."
       },
       {
-        question: "Do you supply stainless steel sheets in bulk?",
-        answer: "Yes, we specialize in bulk supplies for construction companies, fabricators, and large industrials."
+        question: "Which stainless steel finish is best for food processing equipment?",
+        answer: "2B and No.4 finishes are the most common for food-grade applications due to their smooth, easy-to-clean surfaces. BA (Bright Annealed) and Mirror finishes are chosen where pristine aesthetics and maximum hygiene are required."
       }
     ],
     image: p1,
@@ -67,43 +67,46 @@ export const SERVICES = [
     id: "plates",
     title: "Stainless Steel Plates",
     subtitle: "Premium Stainless Steel Plates Supplier in Chennai",
-    description: "Sidharth Steels is a leading stainless steel plates dealer in Chennai, providing high-quality industrial steel plates for heavy engineering, construction, and manufacturing sectors. Our plates are known for their high tensile strength, corrosion resistance, and precision finish, making them ideal for mission-critical industrial applications.",
+    description: "Sidharth Steels is a leading supplier of thick, heavy-duty stainless steel plates in Chennai. Designed to withstand critical industrial environments, our plates offer high tensile strength and excellent mechanical properties, complying with international standards and fully traceable with mill test certificates.",
     features: [
-      "Heavy structural fabrication",
-      "Industrial machinery manufacturing",
-      "Pressure equipment and engineering works",
-      "Infrastructure and construction projects",
-      "Industrial processing units"
+      "Heavy load bearing and structure-supporting capability",
+      "Corrosion-resistant in high-sulfide and aggressive setups",
+      "Strict mill tolerances on flatness, thickness, and dimensions",
+      "Full traceability down to heat numbers of raw source material",
+      "Chemical plant fabrication",
+      "Paper and pulp machinery manufacturing",
+      "Defense and shipyard engineering",
+      "Storage tanks and vessels"
     ],
     whyChooseUs: [
-      "Leading Stainless Steel Plate Dealer in Chennai",
-      "Bulk Stock Availability",
-      "Certified Quality Materials",
-      "Fast Delivery across South India",
-      "Expert Technical Support"
+      "Sourced exclusively from premium ISO-certified global mills",
+      "Complete physical test certification provided without delay",
+      "Fast processing of cut-to-size & tailored profiles",
+      "Vast stock in Chennai warehouse ready to dispatch",
+      "Expert sales guidance regarding material selection"
     ],
     applications: [
-      "Chemical Processing Plants",
-      "Oil & Gas Infrastructure",
-      "Heavy Engineering Projects",
-      "Shipbuilding and Marine Applications",
-      "Food Processing Equipment"
+      "Process reactors and column fabrications",
+      "Heavy machinery frames & marine fixtures",
+      "Boiler and heating systems components",
+      "Chemical and dye processing industries",
+      "Desalination & water treatment vessels"
     ],
     technical: {
-      grades: ["304", "316", "321", "347", "904L", "Duplex 2205"],
-      thickness: "5mm to 150mm",
+      grades: ["304L", "316L", "321", "310S", "904L"],
+      thickness: "3mm to 100mm",
       width: "1000mm to 3000mm",
       standards: "ASTM A240, ASME SA240",
-      processing: "Profile Cutting, Waterjet Cutting, Beveling"
+      processing: "Plates Cut to Profile, Shear/Band Saw Cuts"
     },
     faqs: [
       {
-        question: "What are the common sizes for stainless steel plates?",
-        answer: "We stock standard sizes like 1.25m x 2.5m and can customize dimensions upon request."
+        question: "How specify size and cut on thick plates?",
+        answer: "We supply plates in standard 1.25m x 2.5m, 1.5m x 3.0m, or 2.0m x 6.0m, and can provide band saw or waterjet profile cuts to custom client shapes."
       },
       {
-        question: "Do you provide test certificates for plates?",
-        answer: "Absolutely, all our plates come with mill test certificates ensuring grade purity and strength."
+        question: "Do you supply Mill Test Certificates for every grade?",
+        answer: "Yes, 100% of our products are supplied with original manufacturer Mill Test Certificates detailing accurate chemical and physical tests."
       }
     ],
     image: p2,
@@ -111,44 +114,47 @@ export const SERVICES = [
   {
     id: "pipes-tubes",
     title: "Stainless Steel Pipes & Tubes",
-    subtitle: "High-Quality Stainless Steel Pipes Supplier in Chennai",
-    description: "We are a premier stainless steel pipes and tubes supplier in Chennai, providing high-grade piping solutions for industrial, commercial, and process-based applications. Our pipes are essential for fluid transportation, structural integrity, and architectural designs, offering durability and high corrosion resistance.",
+    subtitle: "High-Calibre Stainless Steel Piping Supplier in Chennai",
+    description: "Sidharth Steels provides a comprehensive range of stainless steel seamless and welded pipes and tubes. Our products are engineered for flawless fluid transportation, structural applications, and high-temperature environments. Sourced from certified producers, they provide long-lasting corrosion protection.",
     features: [
-      "Seamless and Welded Options",
-      "Industrial-grade Materials",
-      "Standard and Customized Lengths",
-      "High Pressure Resistance",
-      "Smooth Internal Surface Finish"
+      "Excellence in high-temperature and high-pressure fluid flow",
+      "Accurate internal dimension tolerances for seamless joinery",
+      "Conforms strictly to ASTM A312 and ASME SA312",
+      "Wide choice of Schedule schedules from SCH 10S to SCH 80S",
+      "Sanitary and beverage pipelines",
+      "Sewerage & wastewater projects",
+      "Thermal exchange tube systems",
+      "Industrial fabrication and railings"
     ],
     whyChooseUs: [
-      "Vast Inventory of Seamless & Welded Pipes",
-      "Competitive Wholesale Rates",
-      "Reliable Supply Chain in Tamil Nadu",
-      "Material Compliance with Global Standards",
-      "Prompt Processing of Orders"
+      "Complete size selection in Chennai ready stock",
+      "Seamless grade consistency on bulk pipe supplies",
+      "Honest material guidance - seamless vs. welded suggestions",
+      "Prompt delivery across Tamil Nadu using local logistics",
+      "Tested and verified leakproof performance"
     ],
     applications: [
-      "Sanitary Piping Systems",
-      "Industrial Manufacturing Plants",
-      "Oil & Chemical Transfer Lines",
-      "Structural & Architectural Frameworks",
-      "HVAC and Cooling Systems"
+      "Sugar machinery and dairy handling lines",
+      "Refineries & chemical piping frameworks",
+      "High-pressure heat exchangers and boilers",
+      "Industrial framework & structural design",
+      "Sanitary system installations"
     ],
     technical: {
       types: ["Seamless", "Welded", "ERW", "Hollow Sections"],
-      grades: ["304", "304L", "316", "316L", "310S", "316Ti"],
+      grades: ["304", "304L", "316", "316L", "310S"],
       size: "1/4\" NB to 24\" NB",
-      schedule: "SCH 5S, 10S, 40S, 80S, 160, XXS",
+      schedule: "SCH 5S, 10S, 40S, 80S, 160",
       forms: ["Round", "Square", "Rectangular"]
     },
     faqs: [
       {
-        question: "What is the difference between seamless and welded tubes?",
-        answer: "Seamless tubes have no seam or weld-joint, making them suitable for high-pressure systems."
+        question: "What is the difference between seamless and welded pipes?",
+        answer: "Seamless pipes have no weld line, enabling them to resist much higher pressure without bursting, ideal for chemical holding lines and high-temperature exchangers. Welded pipes are cost-effective and suitable for lower pressure, sanitary flow, and general structures."
       },
       {
-        question: "Can I get stainless steel pipes cut to specific lengths?",
-        answer: "Yes, we provide precision cutting services for all our pipe and tube products."
+        question: "Are your sheets, pipes, and plates stockable outdoors?",
+        answer: "While stainless steel excels in weather resistance, we stock all materials in our fully closed, secure Chennai distribution center to prevent superficial environmental contamination."
       }
     ],
     image: p3,
@@ -156,39 +162,42 @@ export const SERVICES = [
   {
     id: "bars-rods",
     title: "Stainless Steel Bars & Rods",
-    subtitle: "Industrial Stainless Steel Bars Dealer in Chennai",
-    description: "Sidharth Steels stocks a wide range of stainless steel bars and rods, including rounds, squares, hexagons, and flat bars. Sourced from reputed manufacturers, our bars are perfect for precision machining, engineering components, and structural fabrication.",
+    subtitle: "Premium Quality Bright Bars Dealer in Chennai",
+    description: "Sidharth Steels supplies a vast selection of stainless steel round, square, hex, and flat bars. Sourced from elite manufacturers, they exhibit superb straightness, precise dimensional consistency, and excellent machineability, making them first choice for component manufactures and machining.",
     features: [
-      "High Dimensional Accuracy",
-      "Various Finish Options (Bright, Polished)",
-      "High Tensile Strength",
-      "Grade Verification Sourcing",
-      "Precision Machining Suitability"
+      "Superior bright or black surface finishes for mechanical work",
+      "Consistent straightness preventing friction in automatic lathe feeders",
+      "Sourced with metallurgical verification on heat analysis",
+      "High thermal stability & high pressure durability",
+      "Machining machine elements",
+      "Threaded fasteners & valve stems",
+      "Structural reinforcement pins",
+      "Food equipment rollers & drive shafts"
     ],
     whyChooseUs: [
-      "Stockist of Leading Brands",
-      "Ready Availability of All Sizes",
-      "Material Traceability & Testing",
-      "Competitive Pricing",
-      "Timely Logistics Support"
+      "Sourced from standard certified domestic and global mills",
+      "Ready stock of all popular wire and rod sizes",
+      "Meticulous quality inspection on straightness and diameter",
+      "Fast loading and reliable logistics direct from warehouse",
+      "Flexible cutting lengths for prototype machine shops"
     ],
     applications: [
-      "Automotive Components",
-      "Pump and Valve Shafts",
-      "Fastener Manufacturing",
-      "Heavy Machine Parts",
-      "Architectural Designs"
+      "Pumps shafts & hydraulic rods",
+      "Valves, bolts, nuts & precision fasteners",
+      "Food processing equipment stirrer shafts",
+      "Industrial conveyors and roller tracks",
+      "Modern construction architectural supports"
     ],
     technical: {
       shape: ["Round", "Hex", "Square", "Flat", "Angle", "Channel"],
-      size: "3mm to 400mm Diameter",
-      finish: "Bright, Polished, Black, Centerless Ground",
-      grades: ["303", "304", "316", "316L", "410", "17-4PH"]
+      size: "3mm to 300mm Diameter",
+      finish: "Bright, Polished, Black, Ground",
+      grades: ["303", "304", "304L", "316", "316L", "410"]
     },
     faqs: [
       {
-        question: "Which industries use stainless steel bars?",
-        answer: "They are widely used in automotive, aerospace, fastener manufacturing, and heavy machinery."
+        question: "What grades are recommended for machining bars?",
+        answer: "Grade 303 is an excellent free-machining grade with added sulfur, allowing higher lathe speeds. For superior marine durability combined with machining, we suggest 316L bright bars."
       }
     ],
     image: p4,
@@ -196,39 +205,42 @@ export const SERVICES = [
   {
     id: "fittings",
     title: "Stainless Steel Fittings",
-    subtitle: "Premium Industrial Fittings Supplier in Chennai",
-    description: "We provide complete piping solutions with our high-quality stainless steel fittings, ensuring leak-proof connections and long-term durability in varied industrial environments. Our fittings comply with international standards like ANSI and MSS.",
+    subtitle: "High-Performance Piping Fittings Supplier in Chennai",
+    description: "We supply a premium selection of stainless steel pipe fittings, forged flanges, and threaded connectors to complete your pipeline networks. Our fittings ensure tight, leak-proof containment across aggressive thermal and environmental situations.",
     features: [
-      "Leak-proof Forged & Cast Fittings",
-      "High Corrosion Resistance",
-      "Precision Threading & Sizing",
-      "Compatible with High Temperature Systems",
-      "Wide Grade Selection"
+      "Precisely cast or forged geometries for perfect seal matching",
+      "No-leak guarantees for high gas or liquid pressure networks",
+      "Rigid ISO metallurgical compliance to support severe stress",
+      "High temperature and corrosion resistance parameters",
+      "Hygienic pipeline joints",
+      "Chemical plant fluid redirection",
+      "High-pressure hydraulic connections",
+      "Coastal plumbing & sanitary networks"
     ],
     whyChooseUs: [
-      "Complete Range of Pipe Fittings",
-      "Ready Stock Inventory",
-      "Rigorous Quality Inspection",
-      "Direct Supplier Pricing",
-      "South India Wide Delivery"
+      "A complete package of pipes, flanges, and fittings under one roof",
+      "Ready stock of all standard elbow, tee, and flange dimensions",
+      "Guaranteed material compliance matching your main pipelines",
+      "Meticulous verification of threaded and welded joints",
+      "Prompt delivery across South India"
     ],
     applications: [
-      "Petrochemical Transfer Lines",
-      "Water Treatment Plants",
-      "Gas Distribution Systems",
-      "Food Processing Piping",
-      "Sugar and Fertilizer Plants"
+      "Water desalination of high saline sea-water",
+      "Food, milk, and beverage plants redirection",
+      "Chemical holding vessel supply tubes",
+      "Paper mill pulp transport networks",
+      "Petroleum, oil, and gas piping pipelines"
     ],
     technical: {
-      items: ["Elbow", "Tee", "Reducer", "Stub End", "Union", "Flanges"],
+      items: ["Elbows", "Tees", "Reducers", "Stub Ends", "Unions", "Flanges"],
       connection: ["Buttweld", "Forged", "Threaded", "Socket Weld"],
-      grades: ["WP304/L", "WP316/L", "F304", "F316", "F321"],
-      standards: "ANSI B16.9, B16.11, MSS SP-43"
+      grades: ["WP304/L", "WP316/L", "F304", "F316"],
+      standards: "ANSI B16.9, B16.11, ASME, MSS"
     },
     faqs: [
       {
-        question: "What types of fittings do you stock?",
-        answer: "We stock buttweld, forged, and threaded fittings in all standard stainless steel grades."
+        question: "What buttweld fitting schedules are available?",
+        answer: "We supply buttweld fittings matching standard pipe schedules SCH 10S, SCH 40S, and SCH 80S for a reliable, smooth liquid flow."
       }
     ],
     image: p5,

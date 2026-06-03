@@ -69,7 +69,7 @@ export default function AdminPanel() {
             onClick={handleLogin}
             className="w-full py-5 bg-steel-950 text-white font-bold rounded-2xl flex items-center justify-center gap-3 hover:bg-steel-800 transition-all shadow-xl shadow-steel-950/20"
           >
-            <LogIn size={20} /> Authenticate with Google
+            <LogIn size={20} /> Secure Sign-In
           </button>
           <p className="mt-8 text-[10px] font-bold text-steel-400 uppercase tracking-widest">Authorized Personnel Only</p>
         </div>
@@ -85,7 +85,7 @@ export default function AdminPanel() {
              <Key size={40} className="text-orange-500" />
           </div>
           <h1 className="text-2xl font-bold mb-4">Admin privileges required</h1>
-          <p className="text-steel-500 mb-8 font-medium">To activate your admin access, copy your Unique ID (UID) below and add it to the <span className="font-bold text-steel-950">admins</span> collection in your Firebase Console.</p>
+          <p className="text-steel-500 mb-8 font-medium">To activate your admin access, copy your Unique ID (UID) below and add it to the <span className="font-bold text-steel-950">admins</span> collection in your System Database Console.</p>
           
           <div className="bg-steel-50 p-4 rounded-xl border border-steel-100 flex items-center justify-between gap-4 mb-8">
             <code className="text-xs font-mono text-steel-700 truncate">{user.uid}</code>

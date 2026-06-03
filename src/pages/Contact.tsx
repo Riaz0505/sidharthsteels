@@ -1,116 +1,275 @@
+import { useEffect } from "react";
 import { motion } from "motion/react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock, Globe, Instagram, Linkedin, MessageSquare } from "lucide-react";
 
 export default function Contact() {
+  // Set SEO tags as audited in PDF Page 7
+  useEffect(() => {
+    document.title = "Contact Sidharth Steels | Stainless Steel Supplier Chennai";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    const contentText = "Get in touch with Sidharth Steels for stainless steel pricing, stock availability, and technical advice. Visit us in Kondithope, Chennai or request a quote online.";
+    if (metaDesc) {
+      metaDesc.setAttribute("content", contentText);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content = contentText;
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
-      {/* Main Content */}
-      <section className="py-8 md:py-14 px-4">
+      {/* Intro section with exact H1 from PDF Page 7 */}
+      <section className="bg-white border-b border-steel-100 py-10 md:py-16 px-4">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10">
-            {/* Info Section */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="space-y-3">
-                <h2 className="text-xl font-bold text-steel-950 tracking-tight uppercase leading-none">Contact Information</h2>
-                <p className="text-steel-500 font-medium leading-relaxed max-w-md text-xs md:text-sm">
-                   Visit our regional distribution hub or reach out via phone or email for immediate assistance with your orders.
-                </p>
-              </div>
+          <div className="max-w-4xl space-y-4">
+            <span className="text-[10px] font-black uppercase tracking-[0.25em] text-primary block">
+              Global Procurement Partner
+            </span>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-steel-950 tracking-tighter leading-[1] uppercase">
+              Contact Sidharth Steels <span className="text-primary italic block font-black">&mdash; Get a Quote Today</span>
+            </h1>
+            <div className="pt-2">
+              <h2 className="text-sm font-extrabold uppercase tracking-wide text-steel-900 mb-1">We Are Here to Help</h2>
+              <p className="text-steel-600 font-semibold leading-relaxed text-sm md:text-base max-w-3xl">
+                Whether you need pricing on a specific grade, help choosing between 304L and 316L, or a bulk supply quotation, our team at Sidharth Steels is ready to assist. We respond promptly and speak the language of steel &mdash; no jargon, no runaround.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div className="grid gap-4">
-                {[
-                  { icon: Phone, label: "Fast Assistance", info: "+91 44 2233 4455", sub: "Priority Line" },
-                  { icon: Mail, label: "Technical Support", info: "info@sidharthsteel.com", sub: "Material Analysis" },
-                  { icon: MapPin, label: "Distribution Hub", info: "Chennai, South India", sub: "Operations Center" }
-                ].map((item, i) => (
-                  <motion.div 
-                    key={i}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    className="flex items-center gap-4 md:gap-6 p-4 md:p-6 bg-white border border-steel-100 rounded-[20px] md:rounded-[32px] shadow-sm hover:shadow-lg transition-all"
-                  >
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-steel-950 text-white rounded-[12px] md:rounded-[16px] flex items-center justify-center shadow-lg shrink-0">
-                      <item.icon size={18} />
+      {/* Main Content */}
+      <section className="py-10 md:py-16 px-4">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
+            {/* Info Section */}
+            <div className="lg:col-span-5 space-y-8">
+              <div className="bg-white border border-steel-100 rounded-3xl p-6 shadow-sm space-y-6">
+                <h3 className="text-base font-extrabold text-steel-950 uppercase tracking-wider border-b border-steel-50 pb-3">Our Details</h3>
+                
+                <div className="space-y-4 text-xs font-semibold">
+                  <div className="flex gap-4 items-start">
+                    <div className="w-9 h-9 bg-primary/15 text-primary rounded-xl flex items-center justify-center shrink-0 border border-primary/10">
+                      <Globe size={16} />
                     </div>
                     <div>
-                      <p className="text-[8px] font-bold uppercase tracking-widest text-steel-300 mb-1">{item.label}</p>
-                      <h4 className="text-sm md:text-base font-bold text-steel-950">
-                        {item.icon === Phone ? (
-                          <a href={`tel:${item.info.replace(/\s+/g, '')}`} className="hover:text-primary transition-colors">{item.info}</a>
-                        ) : item.icon === Mail ? (
-                          <a href={`mailto:${item.info}`} className="hover:text-primary transition-colors">{item.info}</a>
-                        ) : item.info}
-                      </h4>
+                      <span className="text-steel-400 text-[10px] uppercase font-black tracking-wider block mb-0.5">Company</span>
+                      <p className="text-steel-950 font-bold text-sm">Sidharth Steels</p>
                     </div>
-                  </motion.div>
-                ))}
+                  </div>
+
+                  <div className="flex gap-4 items-start">
+                    <div className="w-9 h-9 bg-primary/15 text-primary rounded-xl flex items-center justify-center shrink-0 border border-primary/10">
+                      <MapPin size={16} />
+                    </div>
+                    <div>
+                      <span className="text-steel-400 text-[10px] uppercase font-black tracking-wider block mb-0.5">Address</span>
+                      <p className="text-steel-950 font-bold text-[13px] leading-relaxed">
+                        12, Kanjeevaram Sabapathy Street, Kondithope, Chennai &mdash; 600079, Tamil Nadu, India
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 items-start">
+                    <div className="w-9 h-9 bg-primary/15 text-primary rounded-xl flex items-center justify-center shrink-0 border border-primary/10">
+                      <Globe size={16} />
+                    </div>
+                    <div>
+                      <span className="text-steel-400 text-[10px] uppercase font-black tracking-wider block mb-0.5">Website</span>
+                      <a href="https://sidharthsteel.com" className="text-primary hover:underline font-bold text-[13px]">
+                        sidharthsteel.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 items-start">
+                    <div className="w-9 h-9 bg-primary/15 text-primary rounded-xl flex items-center justify-center shrink-0 border border-primary/10">
+                      <Clock size={16} />
+                    </div>
+                    <div>
+                      <span className="text-steel-400 text-[10px] uppercase font-black tracking-wider block mb-0.5">Business Hours</span>
+                      <p className="text-steel-950 font-bold text-[13px]">
+                        Monday to Saturday, 9:00 AM to 6:00 PM IST
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 items-start">
+                    <div className="w-9 h-9 bg-primary/15 text-primary rounded-xl flex items-center justify-center shrink-0 border border-primary/10">
+                      <Phone size={16} />
+                    </div>
+                    <div>
+                      <span className="text-steel-400 text-[10px] uppercase font-black tracking-wider block mb-0.5">Landlines (Indian format)</span>
+                      <a href="tel:+914422334455" className="text-steel-950 hover:text-primary transition-colors font-mono font-bold text-[13px]">
+                        +91 44 2233 4455
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Connect with Us (PDF Page 7-8) */}
+              <div className="bg-steel-950 border border-steel-800 rounded-3xl p-6 text-white space-y-4">
+                <h3 className="text-sm font-extrabold text-primary uppercase tracking-wider block">Connect With Us</h3>
+                <p className="text-steel-300 text-xs font-semibold leading-relaxed">
+                  Follow us on social media for product updates, grade comparisons, and industry insights.
+                </p>
+                <div className="pt-2 space-y-3">
+                  <a href="https://instagram.com/sidharthsteels" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-xs font-bold hover:text-primary transition-colors">
+                    <Instagram size={16} className="text-primary shrink-0" />
+                    <span>Instagram: @sidharthsteels</span>
+                  </a>
+                  <a href="https://linkedin.com/company/sidharthsteels" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-xs font-bold hover:text-primary transition-colors">
+                    <Linkedin size={16} className="text-primary shrink-0" />
+                    <span>LinkedIn: company/sidharthsteels</span>
+                  </a>
+                  <a href="https://wa.me/919150012345" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-xs font-bold hover:text-primary transition-colors">
+                    <MessageSquare size={16} className="text-emerald-400 shrink-0 animate-bounce" />
+                    <span>WhatsApp Business: +91 91500 12345 (Instant enquiries)</span>
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* Form Section */}
+            {/* Request a Quote Form Section (PDF Page 7) */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               className="lg:col-span-7"
             >
-              <div className="bg-white border border-steel-100 shadow-xl rounded-[24px] md:rounded-[32px] p-6 md:p-8">
-                 <h3 className="text-xl font-bold text-steel-950 mb-4 md:mb-6 tracking-tight">Request Specification Support</h3>
-                 <form className="space-y-4 md:space-y-6" onSubmit={(e) => e.preventDefault()}>
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                     <div className="space-y-2">
-                       <label className="text-[9px] font-bold uppercase tracking-widest text-steel-400">Full Name</label>
+              <div className="bg-white border border-steel-100 shadow-xl rounded-3xl p-6 md:p-8 space-y-6">
+                 <div>
+                   <h3 className="text-lg font-black text-steel-950 uppercase tracking-wide">Request a Quote</h3>
+                   <p className="text-steel-600 text-xs font-semibold mt-1">
+                     To get a accurate quote, please share the following specifications with us:
+                   </p>
+                 </div>
+
+                 <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                     <div className="space-y-1">
+                       <label className="text-[9px] font-black uppercase tracking-widest text-steel-400">FullName / Co. Name *</label>
                        <input 
                          type="text" 
-                         placeholder="e.g. John Smith" 
-                         className="w-full px-0 py-2 bg-transparent border-b border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-sm font-bold text-steel-950 placeholder:text-steel-200"
+                         required
+                         placeholder="e.g. John Larson / Larson Fab" 
+                         className="w-full px-0 py-1.5 bg-transparent border-b border-steel-200 focus:outline-none focus:border-primary transition-all text-xs font-bold text-steel-950 placeholder:text-steel-300"
                        />
                      </div>
-                     <div className="space-y-2">
-                       <label className="text-[9px] font-bold uppercase tracking-widest text-steel-400">Professional Email</label>
+                     <div className="space-y-1">
+                       <label className="text-[9px] font-black uppercase tracking-widest text-steel-400">Professional Email *</label>
                        <input 
                          type="email" 
-                         placeholder="e.g. smith@corp.com" 
-                         className="w-full px-0 py-2 bg-transparent border-b border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-sm font-bold text-steel-950 placeholder:text-steel-200"
+                         required
+                         placeholder="e.g. john@larsonfab.com" 
+                         className="w-full px-0 py-1.5 bg-transparent border-b border-steel-200 focus:outline-none focus:border-primary transition-all text-xs font-bold text-steel-950 placeholder:text-steel-300"
                        />
                      </div>
                    </div>
-                   
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                     <div className="space-y-2">
-                       <label className="text-[9px] font-bold uppercase tracking-widest text-steel-400">Inquiry Target</label>
-                       <select className="w-full px-0 py-2 bg-transparent border-b border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-xs font-bold text-steel-950 appearance-none">
-                         <option>Material Specification</option>
-                         <option>Inventory Availability</option>
-                         <option>Technical Consultation</option>
-                         <option>General Quotation</option>
+
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                     <div className="space-y-1">
+                       <label className="text-[9px] font-black uppercase tracking-widest text-steel-400">Product Required *</label>
+                       <select className="w-full px-0 py-1.5 bg-transparent border-b border-steel-200 focus:outline-none focus:border-primary transition-all text-xs font-bold text-steel-950 appearance-none">
+                         <option>Sheets or Coils</option>
+                         <option>Heavy-Gauge Plates</option>
+                         <option>Pipes & Tubes (Seamless/Welded)</option>
+                         <option>Bars & Rods (Rounds/Flats/Hex)</option>
+                         <option>Fittings & Flanges</option>
+                         <option>Other / Custom Specification</option>
                        </select>
                      </div>
-                     <div className="space-y-2">
-                       <label className="text-[9px] font-bold uppercase tracking-widest text-steel-400">Urgency Level</label>
-                       <select className="w-full px-0 py-2 bg-transparent border-b border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-xs font-bold text-steel-950 appearance-none">
-                         <option>Normal (Routine)</option>
-                         <option>High (Next 48H)</option>
-                         <option>Critical (Op-Stop)</option>
+                     <div className="space-y-1">
+                       <label className="text-[9px] font-black uppercase tracking-widest text-steel-400">Stainless Steel Grade *</label>
+                       <select className="w-full px-0 py-1.5 bg-transparent border-b border-steel-200 focus:outline-none focus:border-primary transition-all text-xs font-bold text-steel-950 appearance-none">
+                         <option>Grade 304L (General, Cost-Effective)</option>
+                         <option>Grade 316L (Acid & Coastal Corrosion Resistant)</option>
+                         <option>Grade 201 (Economical Indoor)</option>
+                         <option>Grade 430 (Specialty finish)</option>
+                         <option>Unsure (I need advice from Sidharth technical team)</option>
                        </select>
                      </div>
                    </div>
 
-                   <div className="space-y-2">
-                     <label className="text-[9px] font-bold uppercase tracking-widest text-steel-400">Detailed Message</label>
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                     <div className="space-y-1">
+                       <label className="text-[9px] font-black uppercase tracking-widest text-steel-400">Size & Thickness *</label>
+                       <input 
+                         type="text" 
+                         required
+                         placeholder="e.g. 5mm thickness / width 1250mm, or unsure" 
+                         className="w-full px-0 py-1.5 bg-transparent border-b border-steel-200 focus:outline-none focus:border-primary transition-all text-xs font-bold text-steel-950 placeholder:text-steel-300"
+                       />
+                     </div>
+                     <div className="space-y-1">
+                       <label className="text-[9px] font-black uppercase tracking-widest text-steel-400">Quantity Required (kg or tons) *</label>
+                       <input 
+                         type="text" 
+                         required
+                         placeholder="e.g. 500 Kilograms / 2.5 Tons" 
+                         className="w-full px-0 py-1.5 bg-transparent border-b border-steel-200 focus:outline-none focus:border-primary transition-all text-xs font-bold text-steel-950 placeholder:text-steel-300"
+                       />
+                     </div>
+                   </div>
+
+                   <div className="space-y-1">
+                     <label className="text-[9px] font-black uppercase tracking-widest text-steel-400">Delivery Location *</label>
+                     <input 
+                       type="text" 
+                       required
+                       placeholder="e.g. Chennai Port Area, Ambattur, or Bangalore" 
+                       className="w-full px-0 py-1.5 bg-transparent border-b border-steel-200 focus:outline-none focus:border-primary transition-all text-xs font-bold text-steel-950 placeholder:text-steel-300"
+                     />
+                   </div>
+
+                   <div className="space-y-1">
+                     <label className="text-[9px] font-black uppercase tracking-widest text-steel-400">Specific Project Application / Notes</label>
                      <textarea 
-                       rows={4}
-                       placeholder="Provide technical details about your project..." 
-                       className="w-full px-0 py-2 bg-transparent border-b border-steel-100 focus:outline-none focus:border-steel-950 transition-all text-xs font-bold text-steel-950 placeholder:text-steel-200 resize-none"
+                       rows={3}
+                       placeholder="Detail your operational or structural requirements..." 
+                       className="w-full px-0 py-1.5 bg-transparent border-b border-steel-200 focus:outline-none focus:border-primary transition-all text-xs font-bold text-steel-950 placeholder:text-steel-300 resize-none font-sans"
                      ></textarea>
                    </div>
 
-                   <button className="w-full py-2.5 bg-steel-950 text-white font-bold rounded-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2 shadow-md text-xs md:text-[13px] uppercase tracking-wider">
-                     Transmit Request <Send size={14} />
+                   <button className="w-full py-3 bg-primary text-white font-bold rounded-lg hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/30 text-xs uppercase tracking-widest">
+                     Transmit Quote Request <Send size={13} />
                    </button>
+                   <p className="text-[10px] text-steel-400 text-center font-bold">
+                     We will respond with exact pricing, availability, and lead time as quickly as possible.
+                   </p>
                  </form>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Embedded Google Map Section for UX and Local SEO (PDF Page 7) */}
+      <section className="py-10 bg-white border-t border-steel-100">
+        <div className="container-custom space-y-6">
+          <div className="max-w-3xl space-y-2">
+            <span className="text-primary font-bold tracking-[0.25em] underscore uppercase text-[9px] block">Local Presence</span>
+            <h2 className="text-xl md:text-3xl font-black text-steel-950 tracking-tight">Find Us in Chennai</h2>
+            <p className="text-steel-600 font-semibold text-xs md:text-sm">
+              Sidharth Steels is located in Kondithope, Chennai &mdash; one of the city's key commercial and industrial supply areas, easily accessible from the city centre, Chennai Port, and surrounding industrial zones.
+            </p>
+          </div>
+          
+          {/* Real Embedded Google Map */}
+          <div className="w-full h-[320px] md:h-[420px] rounded-[24px] overflow-hidden border border-steel-200 shadow-md relative group">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.00122335704!2d80.27042571477123!3d13.100913990771146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265f7c32bf259%3A0xbcbc2be83610998!2sKanjeevaram%20Sabapathy%20St%2C%20Kondithope%2C%20George%20Town%2C%20Chennai%2C%20Tamil%20Nadu%20600079!5e0!3m2!1sen!2sin!4v1655123456789!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Sidharth Steels Google Map Location"
+              id="google-maps-embed-iframe"
+            ></iframe>
           </div>
         </div>
       </section>

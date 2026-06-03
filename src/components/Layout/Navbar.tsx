@@ -92,14 +92,14 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-              <a
-                href="tel:+914422334455"
+              <Link
+                to="/contact"
                 className={cn(
                   "px-[18px] py-2 bg-primary text-white text-[10.5px] font-bold uppercase tracking-widest rounded-lg transition-all hover:scale-105 shadow-md shadow-primary/20",
                 )}
               >
                 Get Quote
-              </a>
+              </Link>
             </div>
   
             {/* Mobile Menu Toggle */}
