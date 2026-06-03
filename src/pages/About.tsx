@@ -27,7 +27,7 @@ export default function About() {
         <div className="container-custom">
           {/* Exactly one H1 Heading as verified in Page 4 of the PDF */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-steel-950 tracking-tight leading-tight uppercase max-w-5xl">
-            About Sidharth Steels <span className="text-primary block md:inline font-extrabold">&mdash; Four Decades of Quality & Trust</span>
+            About Sidharth Steels
           </h1>
           <p className="text-steel-400 font-bold text-xs md:text-sm tracking-[0.2em] uppercase mt-2">
             Since 1984 &middot; Chennai &amp; Pan-India Supply

@@ -28,7 +28,7 @@ export default function Contact() {
               Global Procurement Partner
             </span>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-steel-950 tracking-tight leading-tight uppercase">
-              Contact Sidharth Steels <span className="text-primary block font-extrabold">&mdash; Get a Quote Today</span>
+              Contact Sidharth Steels
             </h1>
             <div className="pt-2">
               <h2 className="text-sm font-extrabold uppercase tracking-wide text-steel-900 mb-1">We Are Here to Help</h2>
