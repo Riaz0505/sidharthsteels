@@ -14,10 +14,13 @@ import Admin from "./pages/Admin";
 
 // Scroll to top on route change
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, search, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    // Only scroll to extreme top if there are no ID query parameters or hashes requesting a specific scroll target
+    if (!search.includes("id=") && !hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, search, hash]);
   return null;
 }
 

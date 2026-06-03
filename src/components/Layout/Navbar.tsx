@@ -80,7 +80,7 @@ export default function Navbar() {
                           {SERVICES.map((service) => (
                             <Link
                               key={service.id}
-                              to={`/services#${service.id}`}
+                              to={`/services?id=${service.id}`}
                               className="block px-6 py-3 text-[11px] font-bold text-steel-700 hover:text-primary hover:bg-steel-50 transition-colors uppercase tracking-widest border-l-2 border-transparent hover:border-primary"
                             >
                               {service.title}

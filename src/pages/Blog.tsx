@@ -51,17 +51,16 @@ export default function Blog() {
               <motion.span 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-sm mb-4 md:mb-8 block"
+                className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-2 block"
               >
-                Industrial Knowledge Hub
+                Sidharth Steels
               </motion.span>
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-4xl md:text-6xl lg:text-8xl font-black font-display text-steel-950 leading-[0.9] tracking-tighter"
+                className="text-2xl sm:text-3.5xl md:text-4.5xl font-black font-display text-steel-950 leading-none tracking-tight uppercase"
               >
-                Metal Insights <br />
-                & Market Report
+                Blog
               </motion.h1>
             </div>
           </div>

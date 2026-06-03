@@ -21,14 +21,14 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
       {/* Intro section with exact H1 from PDF Page 7 */}
-      <section className="bg-white border-b border-steel-100 py-10 md:py-16 px-4">
+      <section className="bg-white border-b border-steel-100 py-6 md:py-8 px-4">
         <div className="container-custom">
           <div className="max-w-4xl space-y-4">
             <span className="text-[10px] font-black uppercase tracking-[0.25em] text-primary block">
               Global Procurement Partner
             </span>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-steel-950 tracking-tighter leading-[1] uppercase">
-              Contact Sidharth Steels <span className="text-primary italic block font-black">&mdash; Get a Quote Today</span>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-steel-950 tracking-tight leading-tight uppercase">
+              Contact Sidharth Steels <span className="text-primary block font-extrabold">&mdash; Get a Quote Today</span>
             </h1>
             <div className="pt-2">
               <h2 className="text-sm font-extrabold uppercase tracking-wide text-steel-900 mb-1">We Are Here to Help</h2>
@@ -41,11 +41,11 @@ export default function Contact() {
       </section>
 
       {/* Main Content */}
-      <section className="py-10 md:py-16 px-4">
+      <section className="py-6 md:py-10 px-4">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
             {/* Info Section */}
-            <div className="lg:col-span-5 space-y-8">
+            <div className="lg:col-span-5 space-y-5">
               <div className="bg-white border border-steel-100 rounded-3xl p-6 shadow-sm space-y-6">
                 <h3 className="text-base font-extrabold text-steel-950 uppercase tracking-wider border-b border-steel-50 pb-3">Our Details</h3>
                 
@@ -110,27 +110,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Connect with Us (PDF Page 7-8) */}
-              <div className="bg-steel-950 border border-steel-800 rounded-3xl p-6 text-white space-y-4">
-                <h3 className="text-sm font-extrabold text-primary uppercase tracking-wider block">Connect With Us</h3>
-                <p className="text-steel-300 text-xs font-semibold leading-relaxed">
-                  Follow us on social media for product updates, grade comparisons, and industry insights.
-                </p>
-                <div className="pt-2 space-y-3">
-                  <a href="https://instagram.com/sidharthsteels" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-xs font-bold hover:text-primary transition-colors">
-                    <Instagram size={16} className="text-primary shrink-0" />
-                    <span>Instagram: @sidharthsteels</span>
-                  </a>
-                  <a href="https://linkedin.com/company/sidharthsteels" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-xs font-bold hover:text-primary transition-colors">
-                    <Linkedin size={16} className="text-primary shrink-0" />
-                    <span>LinkedIn: company/sidharthsteels</span>
-                  </a>
-                  <a href="https://wa.me/919150012345" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-xs font-bold hover:text-primary transition-colors">
-                    <MessageSquare size={16} className="text-emerald-400 shrink-0 animate-bounce" />
-                    <span>WhatsApp Business: +91 91500 12345 (Instant enquiries)</span>
-                  </a>
-                </div>
-              </div>
+
             </div>
 
             {/* Request a Quote Form Section (PDF Page 7) */}
@@ -139,7 +119,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               className="lg:col-span-7"
             >
-              <div className="bg-white border border-steel-100 shadow-xl rounded-3xl p-6 md:p-8 space-y-6">
+              <div className="bg-white border border-steel-100 shadow-xl rounded-3xl p-5 md:p-6 space-y-5">
                  <div>
                    <h3 className="text-lg font-black text-steel-950 uppercase tracking-wide">Request a Quote</h3>
                    <p className="text-steel-600 text-xs font-semibold mt-1">
@@ -247,7 +227,7 @@ export default function Contact() {
       </section>
 
       {/* Embedded Google Map Section for UX and Local SEO (PDF Page 7) */}
-      <section className="py-10 bg-white border-t border-steel-100">
+      <section className="py-6 bg-white border-t border-steel-100">
         <div className="container-custom space-y-6">
           <div className="max-w-3xl space-y-2">
             <span className="text-primary font-bold tracking-[0.25em] underscore uppercase text-[9px] block">Local Presence</span>
