@@ -39,7 +39,7 @@ const SUBCATEGORIES_DATA: Record<string, { title: string; desc: string; specs: s
 };
 export default function Services() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const serviceId = searchParams.get("id");
+  const serviceId = searchParams.get("id") || "sheets-coils";
 
   useEffect(() => {
     // Set dynamic SEO tags for the Catalog page (PDF Page 5/6)
@@ -77,23 +77,8 @@ export default function Services() {
 
     return (
       <div id="services-page-root" className="min-h-screen bg-[#FDFDFD] font-sans pb-16">
-        {/* Navigation Breadcrumb Toolbar */}
-        <section className="bg-steel-50 border-b border-steel-100/60 py-3.5 px-4">
-          <div className="container-custom flex items-center justify-between">
-            <button
-              onClick={() => setSearchParams({})}
-              className="inline-flex items-center gap-2 text-[11px] font-black uppercase text-steel-500 hover:text-primary transition-colors tracking-widest bg-white py-2 px-4 rounded-xl border border-steel-200/50 shadow-sm cursor-pointer"
-            >
-              <ArrowLeft size={14} className="text-primary" /> Back to Catalog Hub
-            </button>
-            <span className="text-steel-400 font-mono text-[9px] md:text-[10px] font-bold tracking-widest uppercase hidden sm:inline">
-              MTC CERTIFICATE VERIFIED
-            </span>
-          </div>
-        </section>
-
         {/* Title Header Section */}
-        <header id="service-header" className="pt-5 pb-2 px-4 bg-white border-b border-steel-100">
+        <header id="service-header" className="pt-6 pb-2 px-4 bg-white border-b border-steel-100">
           <div className="container-custom">
             <span className="text-primary font-bold tracking-[0.25em] uppercase text-[10px] md:text-xs mb-1.5 block">
               MATERIAL DIVISION

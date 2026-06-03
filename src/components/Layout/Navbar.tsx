@@ -23,7 +23,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Services", path: "/services", hasDropdown: true },
+    { name: "Services", path: "/services?id=sheets-coils", hasDropdown: true },
     { name: "Blog", path: "/blog" },
     { name: "Contact Us", path: "/contact" },
   ];

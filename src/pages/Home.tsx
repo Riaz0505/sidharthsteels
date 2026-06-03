@@ -112,11 +112,11 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-              <Link to="/services" className="px-5 py-2.5 bg-primary text-white text-[11px] font-bold rounded-lg hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/30 w-full sm:w-auto uppercase tracking-wider">
-                Explore Inventory <ArrowRight size={14} />
+              <Link to="/contact" className="px-5 py-2.5 bg-primary text-white text-[11px] font-bold rounded-lg hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/30 w-full sm:w-auto uppercase tracking-wider">
+                Material Request <ArrowRight size={14} />
               </Link>
-              <Link to="/contact" className="px-5 py-2.5 border-2 border-white/20 text-white text-[11px] font-bold rounded-lg hover:bg-white/10 active:scale-95 transition-all text-center w-full sm:w-auto backdrop-blur-sm uppercase tracking-wider">
-                Material Request
+              <Link to="/about" className="px-5 py-2.5 border-2 border-white/20 text-white text-[11px] font-bold rounded-lg hover:bg-white/10 active:scale-95 transition-all text-center w-full sm:w-auto backdrop-blur-sm uppercase tracking-wider">
+                About Us
               </Link>
             </div>
           </motion.div>
@@ -203,7 +203,7 @@ export default function Home() {
                 South India's most comprehensive inventory of premium stainless steel grades & forms.
               </p>
             </div>
-            <Link to="/services" className="w-full md:w-auto px-5 py-2.5 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-primary/40 uppercase tracking-widest text-xs md:text-[13px]">
+            <Link to="/services?id=sheets-coils" className="w-full md:w-auto px-5 py-2.5 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-primary/40 uppercase tracking-widest text-xs md:text-[13px]">
                Full Catalog <ArrowRight size={16} />
             </Link>
           </div>
