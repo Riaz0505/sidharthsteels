@@ -1,27 +1,18 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { Target, Eye, ShieldCheck, CheckCircle2 } from "lucide-react";
+import SEO from "../components/SEO";
 import p1 from "../assets/p1.jpg";
 import p2 from "../assets/p2.jpg";
 import p3 from "../assets/p3.jpg";
 
 export default function About() {
-  // Set SEO tags as audited in PDF Page 4
-  useEffect(() => {
-    document.title = "About Sidharth Steels | Stainless Steel Supplier Chennai Since 1984";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const contentText = "Learn about Sidharth Steels — Chennai's trusted stainless steel supplier and stockist since 1984. We supply sheets, plates, pipes, bars & fittings to industries across India.";
-    if (metaDesc) {
-      metaDesc.setAttribute("content", contentText);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = contentText;
-      document.head.appendChild(meta);
-    }
-  }, []);  return (
+  return (
     <div className="min-h-screen bg-[#F8F9FA]">
+      <SEO 
+        title="About Sidharth Steels"
+        description="Learn about Sidharth Steels — Chennai's trusted stainless steel supplier and stockist since 1984. We supply sheets, plates, pipes, bars & fittings to industries across India."
+      />
       {/* Title Header Section */}
       <section className="pt-6 pb-3 px-4 bg-white">
         <div className="container-custom">
