@@ -11,7 +11,7 @@ export default function About() {
     <div className="min-h-screen bg-[#F8F9FA]">
       <SEO 
         title="About Sidharth Steels"
-        description="Learn about Sidharth Steels — Chennai's trusted stainless steel supplier and stockist since 1984. We supply sheets, plates, pipes, bars & fittings to industries across India."
+        description="Learn about Sidharth Steels, Chennai's trusted stainless steel supplier and stockist. We supply sheets, plates, pipes, bars and fittings to industries across India."
       />
       {/* Title Header Section */}
       <section className="pt-6 pb-3 px-4 bg-white">
@@ -21,7 +21,7 @@ export default function About() {
             About Sidharth Steels
           </h1>
           <p className="text-steel-400 font-bold text-xs md:text-sm tracking-[0.2em] uppercase mt-2">
-            Since 1984 &middot; Chennai &amp; Pan-India Supply
+            Chennai &amp; Pan-India Supply
           </p>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function About() {
                   Sidharth Steels is a Chennai-based stainless steel supplier and stockist with a legacy spanning over four decades. Established in 1984, we have built our reputation on one simple principle: supplying quality stainless steel products backed by honest advice and reliable service.
                 </p>
                 <p>
-                  Located at Kondithope in the heart of Chennai's industrial supply district, we serve a diverse base of customers &mdash; from small fabrication workshops to large-scale industrial contractors and OEM manufacturers &mdash; across Tamil Nadu and throughout India.
+                  Located at Kondithope in the heart of Chennai's industrial supply district, we serve a diverse base of customers, from small fabrication workshops to large-scale industrial contractors and OEM manufacturers, across Tamil Nadu and throughout India.
                 </p>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function About() {
                   <li className="flex items-center gap-2.5"><CheckCircle2 size={16} className="text-primary shrink-0" /> Fittings & Flanges</li>
                 </ul>
                 <p>
-                  Our inventory covers the most widely used stainless steel grades &mdash; 304L, 316L, 201, and 430 &mdash; across a comprehensive range of sizes, thicknesses, and finishes. All material is sourced from reputable mills and supplied with full Mill Test Certificates (MTCs).
+                  Our inventory covers the most widely used stainless steel grades (304L, 316L, 201, and 430) across a comprehensive range of sizes, thicknesses, and finishes. All material is sourced from reputable mills and supplied with full Mill Test Certificates (MTCs).
                 </p>
               </div>
             </div>
@@ -102,14 +102,14 @@ export default function About() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-center">
             <div className="space-y-4">
-              <span className="text-primary font-black uppercase tracking-[0.2em] text-[10px] block">Since 1984</span>
+              <span className="text-primary font-black uppercase tracking-[0.2em] text-[10px] block">Established Legacy</span>
               <h2 className="text-lg md:text-2xl lg:text-3xl font-extrabold text-steel-950 uppercase tracking-tight">Our Experience</h2>
               <div className="space-y-3 text-steel-600 font-medium text-sm md:text-base leading-relaxed">
                 <p>
                   Since 1984, Sidharth Steels has been synonymous with quality stainless steel in Chennai. Over the years, we have grown from a local stockist into a trusted supply partner for industries including food processing, pharmaceuticals, railways, oil & gas, construction, textile machinery, and more.
                 </p>
                 <p>
-                  Our team brings deep technical knowledge of stainless steel grades, specifications, and applications. We don't just sell steel &mdash; we help our customers choose the right material for the right job, saving them time, money, and costly mistakes.
+                  Our team brings deep technical knowledge of stainless steel grades, specifications, and applications. We don't just sell steel, we help our customers choose the right material for the right job, saving them time, money, and costly mistakes.
                 </p>
               </div>
               
@@ -232,7 +232,7 @@ export default function About() {
                   <h3 className="text-lg md:text-xl font-extrabold text-steel-950 uppercase tracking-tight">Our Vision</h3>
                 </div>
                 <p className="text-steel-600 font-medium leading-relaxed text-sm">
-                  To be India's most trusted stainless steel supplier &mdash; known for the quality of our products, the depth of our technical knowledge, and the reliability of our service.
+                  To be India's most trusted stainless steel supplier, known for the quality of our products, the depth of our technical knowledge, and the reliability of our service.
                 </p>
                 <ul className="space-y-2 text-xs font-bold text-steel-800 font-sans border-t border-steel-100 pt-3 mt-2">
                   {[
@@ -314,10 +314,10 @@ export default function About() {
               </div>
               <h4 className="text-sm md:text-base font-bold text-steel-950 tracking-tight uppercase">Our Commitment to Industry</h4>
               <p className="text-steel-500 font-medium text-xs md:text-sm leading-relaxed">
-                The industries we serve &mdash; mining, oil & gas, food processing, pharmaceuticals, construction, and more &mdash; demand materials that perform without failure. A pipeline that corrodes, a fitting that fails, a food-contact surface that contaminates: these are not just commercial problems, they are safety problems.
+                The industries we serve (mining, oil & gas, food processing, pharmaceuticals, construction, and more) demand materials that perform without failure. A pipeline that corrodes, a fitting that fails, a food-contact surface that contaminates: these are not just commercial problems, they are safety problems.
               </p>
               <p className="text-steel-500 font-medium text-xs md:text-sm leading-relaxed pt-1 border-t border-steel-100 mt-2">
-                That is why at Sidharth Steels, we take material quality seriously. Every product we supply meets the grade and standard it is sold as &mdash; certified, traceable, and backed by our four decades of reputation.
+                That is why at Sidharth Steels, we take material quality seriously. Every product we supply meets the grade and standard it is sold as: certified, traceable, and backed by our four decades of reputation.
               </p>
             </div>
           </div>

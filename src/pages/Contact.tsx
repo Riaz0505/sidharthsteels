@@ -33,7 +33,7 @@ export default function Contact() {
             <div className="pt-2">
               <h2 className="text-sm font-extrabold uppercase tracking-wide text-steel-900 mb-1">We Are Here to Help</h2>
               <p className="text-steel-600 font-semibold leading-relaxed text-sm md:text-base max-w-3xl">
-                Whether you need pricing on a specific grade, help choosing between 304L and 316L, or a bulk supply quotation, our team at Sidharth Steels is ready to assist. We respond promptly and speak the language of steel &mdash; no jargon, no runaround.
+                Whether you need pricing on a specific grade, help choosing between 304L and 316L, or a bulk supply quotation, our team at Sidharth Steels is ready to assist. We respond promptly and speak the language of steel, with no jargon and no runaround.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function Contact() {
                     <div>
                       <span className="text-steel-400 text-[10px] uppercase font-black tracking-wider block mb-0.5">Address</span>
                       <p className="text-steel-950 font-bold text-[13px] leading-relaxed">
-                        12, Kanjeevaram Sabapathy Street, Kondithope, Chennai &mdash; 600079, Tamil Nadu, India
+                        12, Kanjeevaram Sabapathy Street, Kondithope, Chennai, Pin 600079, Tamil Nadu, India
                       </p>
                     </div>
                   </div>
@@ -233,7 +233,7 @@ export default function Contact() {
             <span className="text-primary font-bold tracking-[0.25em] underscore uppercase text-[9px] block">Local Presence</span>
             <h2 className="text-xl md:text-3xl font-black text-steel-950 tracking-tight">Find Us in Chennai</h2>
             <p className="text-steel-600 font-semibold text-xs md:text-sm">
-              Sidharth Steels is located in Kondithope, Chennai &mdash; one of the city's key commercial and industrial supply areas, easily accessible from the city centre, Chennai Port, and surrounding industrial zones.
+              Sidharth Steels is located in Kondithope, Chennai, one of the city's key commercial and industrial supply areas, easily accessible from the city centre, Chennai Port, and surrounding industrial zones.
             </p>
           </div>
           

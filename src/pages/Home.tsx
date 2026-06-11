@@ -18,8 +18,8 @@ const iconMap: Record<string, any> = {
 
 export default function Home() {
   const [settings, setSettings] = useState({
-    heroTitle: "Chennai's Trusted Stainless Steel Supplier Since 1984",
-    heroTagline: "Sidharth Steels is one of Chennai's most established stainless steel stockists and suppliers. With over four decades of experience, we supply a comprehensive range of stainless steel products — sheets, coils, plates, pipes, tubes, bars, rods, and fittings — to industries across Tamil Nadu and India.",
+    heroTitle: "Chennai's Trusted Stainless Steel Supplier",
+    heroTagline: "Sidharth Steels is one of Chennai's most established stainless steel stockists and suppliers. With over four decades of experience, we supply a comprehensive range of stainless steel products, sheets, coils, plates, pipes, tubes, bars, rods, and fittings, to industries across Tamil Nadu and India.",
     heroImage: p6,
   });
   const [posts, setPosts] = useState<any[]>(STATIC_POSTS.slice(0, 3));
@@ -29,7 +29,7 @@ export default function Home() {
   useEffect(() => {
     document.title = "Stainless Steel Supplier in Chennai | Sidharth Steels";
     const metaDesc = document.querySelector('meta[name="description"]');
-    const contentText = "Sidharth Steels — Chennai's trusted stainless steel supplier since 1984. Sheets, coils, plates, pipes, bars & fittings in grades 304L and 316L. Get a quote today.";
+    const contentText = "Sidharth Steels, Chennai's trusted stainless steel supplier. Sheets, coils, plates, pipes, bars and fittings in grades 304L and 316L. Get a quote today.";
     if (metaDesc) {
       metaDesc.setAttribute("content", contentText);
     } else {
@@ -55,8 +55,8 @@ export default function Home() {
         const siteConfig = await dbService.getDocument("settings", "site_config") as any;
         if (siteConfig) {
           setSettings({
-            heroTitle: siteConfig.heroTitle || "Chennai's Trusted Stainless Steel Supplier Since 1984",
-            heroTagline: siteConfig.heroTagline || "Sidharth Steels is one of Chennai's most established stainless steel stockists and suppliers. With over four decades of experience, we supply a comprehensive range of stainless steel products — sheets, coils, plates, pipes, tubes, bars, rods, and fittings — to industries across Tamil Nadu and India.",
+            heroTitle: siteConfig.heroTitle || "Chennai's Trusted Stainless Steel Supplier",
+            heroTagline: siteConfig.heroTagline || "Sidharth Steels is one of Chennai's most established stainless steel stockists and suppliers. With over four decades of experience, we supply a comprehensive range of stainless steel products, sheets, coils, plates, pipes, tubes, bars, rods, and fittings, to industries across Tamil Nadu and India.",
             heroImage: siteConfig.heroImage || p5,
           });
         }
@@ -102,8 +102,8 @@ export default function Home() {
           >
             {/* The single H1 tag for the homepage */}
             <h1 className="font-display text-xl sm:text-3xl md:text-[40px] lg:text-[48px] xl:text-[54px] font-extrabold text-white leading-[1.15] mb-5 md:mb-6 tracking-tight text-left animate-fade-in uppercase">
-              {settings.heroTitle.includes("Since 1984") ? (
-                <>Chennai's Trusted <br className="hidden md:block" /><span className="text-primary">Stainless Steel Supplier</span> <br className="hidden md:block" />Since 1984</>
+              {settings.heroTitle.includes("Stainless Steel Supplier") ? (
+                <>Chennai's Trusted <br className="hidden md:block" /><span className="text-primary">Stainless Steel Supplier</span></>
               ) : settings.heroTitle}
             </h1>
             
@@ -129,16 +129,16 @@ export default function Home() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-center">
             <div className="lg:col-span-7">
-              <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-sm mb-3 block">Unmatched Quality Supply Since 1984</span>
+              <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] md:text-sm mb-3 block">Unmatched Quality Supply</span>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-steel-950 mb-4 tracking-tight leading-tight">Why Choose Sidharth Steels?</h2>
               <p className="text-steel-500 font-semibold text-xs md:text-sm mb-6 leading-relaxed max-w-2xl">
                 With over four decades of trusted relationship with tier-1 global mills, we maintain consistent raw materials inventory to provide value-added services that smaller distributors cannot offer.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-[18px]">
                 {[
-                  "In business since 1984 — four decades of trusted supply.",
-                  "Comprehensive inventory — all major grades and product forms in stock.",
-                  "Grades 304L and 316L ready to dispatch — no long lead times.",
+                  "In business since 1984 representing four decades of trusted supply.",
+                  "Comprehensive inventory with all major grades and product forms in stock.",
+                  "Grades 304L and 316L ready to dispatch with no long lead times.",
                   "Mill Test Certificates (MTCs) supplied with all material.",
                   "Cut-to-size and custom lengths available on request.",
                   "Serving Chennai, Tamil Nadu, and pan-India logistics."

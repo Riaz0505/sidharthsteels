@@ -50,7 +50,7 @@ export const SERVICES = [
     faqs: [
       {
         question: "What is the difference between 304L and 316L stainless steel sheets?",
-        answer: "304L is a cost-effective, general-purpose grade suitable for most indoor and light outdoor applications. 316L contains 2-3% molybdenum, which gives it significantly better resistance to pitting, salt, chlorides, and harsh chemicals — making it ideal for coastal areas, marine environments, and chemical plants."
+        answer: "304L is a cost-effective, general-purpose grade suitable for most indoor and light outdoor applications. 316L contains 2-3% molybdenum, which gives it significantly better resistance to pitting, salt, chlorides, and harsh chemicals, making it ideal for coastal areas, marine environments, and chemical plants."
       },
       {
         question: "Do you supply stainless steel sheets in Chennai for small quantities?",
@@ -129,7 +129,7 @@ export const SERVICES = [
     whyChooseUs: [
       "Complete size selection in Chennai ready stock",
       "Seamless grade consistency on bulk pipe supplies",
-      "Honest material guidance - seamless vs. welded suggestions",
+      "Honest material guidance, seamless vs. welded suggestions",
       "Prompt delivery across Tamil Nadu using local logistics",
       "Tested and verified leakproof performance"
     ],

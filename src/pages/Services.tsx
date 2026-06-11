@@ -149,7 +149,7 @@ export default function Services() {
                     <div className="flex items-center gap-2">
                       <HelpCircle className="text-primary" size={18} />
                       <h3 className="font-display text-xs md:text-sm font-black text-steel-950 uppercase tracking-wider">
-                        Common FAQs &mdash; {activeService.title.replace("Stainless Steel ", "")}
+                        Common FAQs for {activeService.title.replace("Stainless Steel ", "")}
                       </h3>
                     </div>
                     <div className="space-y-3.5">
